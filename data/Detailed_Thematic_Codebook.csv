@@ -1,0 +1,12 @@
+Theme #,Code,Subtheme,Definition,Example quotes
+1,HORIZ_DOM,Dominance mapping,Mapping words’ perceived power/control onto the X-axis (left = low dominance; right = high dominance).,"„Silná slova jsem dával víc doprava, slabší vlevo, jakoby pravá ruka je silnější.“ (PCM017)"
+1,VERT_INT,Intensity mapping,"Placing words of high arousal/intensity upwards on the Y-axis, and calm/low-intensity downwards.","„…když bylo slovo hodně energické, automaticky jsem to dal nahoru, a klidná spíš dolů.“ (PCM008)"
+1,DEPTH_VAL,Valence mapping,"Using the Z-axis for positivity („front“) vs. negativity („back“): positive = closer, negative = further.","„Ty hezké pojmy jsem tlačila dopředu, jako by byly ke mně přitahované. A ty nepříjemné jsem dávala víc dozadu.“ (PCM023)"
+2,EMBOD_SENS,Bodily sensation,"Descriptions of felt bodily changes (heart, arms, chest) that guided placement.","„Cítil jsem, jak mi bije srdce, když jsem četl ‘hodně intenzivní’, tak jsem to dával výš.“ (PCM010)"
+2,EMBOD_META,Metaphorical enactment,"Explicit references to „good is up,“ „power is right,“ „distance is danger“ metaphors.","„‚Dobré je nahoře,‘ říkal jsem si – doslova jsem to vizualizoval nad hlavou.“ (PCZ021)"
+3,MEM_REF,Memory & consistency,Referring back to earlier placements to keep a coherent mental map („I remembered where I put X earlier“).,"„…po pár slovech jsem si řekl, kam jsem to posledně dal, a držel jsem se té linky.“ (PCM009)"
+3,SYS_DEV,Strategy development,Moving from an initial free-for-all to a systematic 3-axis scheme as the task progressed.,"„Zpočátku panika, ale pak jsem si vytvořil systém: pravá dominance, nahoru intenzita, dopředu valence – a šlo to rychle.“ (PCM009)"
+4,FATIGUE,Physical fatigue,Reports of hand/arm tiredness affecting precision or inclination to place words more centrally.,"„Ruka mě bolela, takže jsem méně řešil, kam přesně to jde, a víc dal do středu.“ (PCZ035)"
+4,MOOD,Affective state,"Descriptions of current mood (sadness, happiness) biasing placement (sad words lower, happy words higher).","„Byl jsem dneska docela veselý, takže jsem pozitivní dal ještě výš než normálně.“ (PCZ012)"
+4,CAFFEINE,Caffeine/alertness,Mentions of coffee or alertness boosting „up-ness“ or speeding up the task.,"„Po kávě jsem byl tak nabitý, že ty intenzivní šly až nahoru pod strop.“ (PCM008)"
+5,IND_DIFF,Atypical mappings,"Individual departures from the 3-axis heuristic (e.g. diagonal placements, emotive clusters).","„Některá slova jsem umístil diagonálně, protože to byla kombinace hněvu a smutku.“ (PCZ030)"
