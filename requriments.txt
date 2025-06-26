@@ -1,5 +1,0 @@
-streamlit>=1.20
-pandas
-plotly
-scikit-learn
-python-docx
