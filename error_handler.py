@@ -91,15 +91,31 @@ def validate_user_id(user_id: str, available_ids: list) -> bool:
         if not user_id:
             logger.error("ID uživatele je prázdné")
             st.error("🚫 **Chyba přístupu:** ID uživatele není zadáno")
-            st.info("Pro zobrazení vašeho osobního reportu je potřeba validní ID v URL.")
-            st.code("Správný formát: ?ID=vase_id")
+            st.info("**Jak získat přístup k vašemu reportu:**")
+            st.markdown("""
+            - Použijte osobní odkaz, který jste obdrželi od organizátorů studie
+            - Správný formát URL: `?ID=vase_id`
+            - Každý účastník má unikátní ID pro přístup pouze ke svým výsledkům
+            """)
+            st.markdown("**🔒 Bezpečnost:** Výsledky jiných účastníků nejsou přístupné.")
+            st.markdown("**❓ Nemáte svůj odkaz?** Kontaktujte organizátory studie.")
             return False
             
         if str(user_id) not in [str(id) for id in available_ids]:
             logger.error(f"Neplatné ID uživatele: {user_id}")
             st.error(f"🚫 **ID '{user_id}' nebylo nalezeno**")
-            st.error("Vaše ID není v databázi účastníků. Kontaktujte prosím organizátory studie.")
-            st.info(f"**Dostupná ID (prvních 10):** {available_ids[:10]}")
+            st.error("**Možné příčiny:**")
+            st.markdown("""
+            - ID bylo zadáno nesprávně (zkontrolujte překlepy)
+            - Používáte zastaralý nebo neplatný odkaz
+            - Vaše data ještě nebyla zpracována
+            """)
+            st.markdown("**🔧 Co dělat:**")
+            st.markdown("""
+            - Zkontrolujte správnost vašeho osobního odkazu
+            - Kontaktujte organizátory studie s vaším ID
+            - Ověřte, že používáte nejnovější odkaz
+            """)
             return False
             
         logger.info(f"Validace ID {user_id} úspěšná")

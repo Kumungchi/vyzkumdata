@@ -640,3 +640,1368 @@
 2025-08-28 13:38:04,560 - error_handler - INFO - Data naètena za 0.03 sekund
 2025-08-28 13:38:04,572 - error_handler - ERROR - ID uživatele je prázdné
 2025-08-28 13:40:14,267 - error_handler - ERROR - ID uživatele je prázdné
+2025-08-28 14:08:46,085 - error_handler - INFO - Úspìšnì naèten soubor: data\vybrana_slova_30.csv, tvar: (30, 5)
+2025-08-28 14:08:46,098 - error_handler - INFO - Úspìšnì naèten soubor: data\hand_dataset.csv, tvar: (1140, 10)
+2025-08-28 14:08:46,102 - error_handler - INFO - Validace baseline dataset úspìšná
+2025-08-28 14:08:46,102 - error_handler - INFO - Validace hand dataset úspìšná
+2025-08-28 14:08:46,108 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
+2025-08-28 14:08:46,110 - error_handler - INFO - Data naètena za 0.03 sekund
+2025-08-28 14:12:31,398 - error_handler - INFO - Úspìšnì naèten soubor: data\vybrana_slova_30.csv, tvar: (30, 5)
+2025-08-28 14:12:31,405 - error_handler - INFO - Úspìšnì naèten soubor: data\hand_dataset.csv, tvar: (1140, 10)
+2025-08-28 14:12:31,406 - error_handler - INFO - Validace baseline dataset úspìšná
+2025-08-28 14:12:31,406 - error_handler - INFO - Validace hand dataset úspìšná
+2025-08-28 14:12:31,408 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
+2025-08-28 14:12:31,410 - error_handler - INFO - Data naètena za 0.02 sekund
+2025-08-28 14:12:31,419 - error_handler - ERROR - ID uživatele je prázdné
+2025-08-28 14:12:53,683 - error_handler - INFO - Validace ID PCZ001 úspìšná
+2025-08-28 14:12:53,683 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: page_access, Details: Pøístup k osobnímu reportu
+2025-08-28 14:12:53,687 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: stats_calculated, Details: Words: 30, Avg RT: 6.80
+2025-08-28 14:17:56,410 - error_handler - INFO - Úspìšnì naèten soubor: data\vybrana_slova_30.csv, tvar: (30, 5)
+2025-08-28 14:17:56,418 - error_handler - INFO - Úspìšnì naèten soubor: data\hand_dataset.csv, tvar: (1140, 10)
+2025-08-28 14:17:56,419 - error_handler - INFO - Validace baseline dataset úspìšná
+2025-08-28 14:17:56,419 - error_handler - INFO - Validace hand dataset úspìšná
+2025-08-28 14:17:56,420 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
+2025-08-28 14:17:56,421 - error_handler - INFO - Data naètena za 0.01 sekund
+2025-08-28 14:17:56,429 - error_handler - INFO - Validace ID PCZ001 úspìšná
+2025-08-28 14:17:56,429 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: page_access, Details: Pøístup k osobnímu reportu
+2025-08-28 14:17:56,431 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: stats_calculated, Details: Words: 30, Avg RT: 6.80
+2025-08-28 14:17:56,666 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: charts_created, Details: Všechny grafy úspìšnì vytvoøeny
+2025-08-28 14:17:56,670 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: insights_generated, Details: Generováno 5 insightù
+2025-08-28 14:17:56,785 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:17:56,786 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:17:56,789 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpkebv0gby.
+2025-08-28 14:17:56,790 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:17:56,791 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpquxl5lql.
+2025-08-28 14:17:56,792 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpquxl5lql
+2025-08-28 14:17:57,483 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpkebv0gby/index.html
+2025-08-28 14:17:57,484 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:17:58,363 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:17:58,365 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:17:58,365 - kaleido.kaleido - INFO - Got 12FD
+2025-08-28 14:17:58,366 - kaleido._kaleido_tab - INFO - Processing Tvj_emon_radar.png
+2025-08-28 14:17:58,366 - kaleido._kaleido_tab - INFO - Sending big command for Tvj_emon_radar.png.
+2025-08-28 14:17:58,506 - kaleido._kaleido_tab - INFO - Sent big command for Tvj_emon_radar.png.
+2025-08-28 14:17:58,508 - kaleido.kaleido - INFO - Reloading tab 12FD before return.
+2025-08-28 14:17:59,120 - kaleido.kaleido - INFO - Putting tab 12FD back (queue size: 0).
+2025-08-28 14:17:59,121 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:17:59,121 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:17:59,122 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:17:59,123 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:17:59,123 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:17:59,123 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:17:59,123 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:17:59,124 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:17:59,125 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:17:59,125 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:17:59,125 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:17:59,125 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:17:59,469 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:17:59,470 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:17:59,486 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:17:59,486 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:17:59,601 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:17:59,602 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:17:59,602 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpe_3dt513.
+2025-08-28 14:17:59,603 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:17:59,604 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmparjpdzw1.
+2025-08-28 14:17:59,604 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmparjpdzw1
+2025-08-28 14:17:59,974 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpe_3dt513/index.html
+2025-08-28 14:17:59,975 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:18:01,095 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:18:01,096 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:18:01,096 - kaleido.kaleido - INFO - Got ABE6
+2025-08-28 14:18:01,096 - kaleido._kaleido_tab - INFO - Processing Jak_vnm_pjemnost_slov_oproti_ostatnmbrsub_stylecolor7F8C8DTvoje_hodnocen_bylo_pozitivnj_ne_u_56_astnksub.png
+2025-08-28 14:18:01,097 - kaleido._kaleido_tab - INFO - Sending big command for Jak_vnm_pjemnost_slov_oproti_ostatnmbrsub_stylecolor7F8C8DTvoje_hodnocen_bylo_pozitivnj_ne_u_56_astnksub.png.
+2025-08-28 14:18:01,212 - kaleido._kaleido_tab - INFO - Sent big command for Jak_vnm_pjemnost_slov_oproti_ostatnmbrsub_stylecolor7F8C8DTvoje_hodnocen_bylo_pozitivnj_ne_u_56_astnksub.png.
+2025-08-28 14:18:01,214 - kaleido.kaleido - INFO - Reloading tab ABE6 before return.
+2025-08-28 14:18:01,309 - kaleido.kaleido - INFO - Putting tab ABE6 back (queue size: 0).
+2025-08-28 14:18:01,309 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:18:01,310 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:18:01,310 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:01,311 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:01,311 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:01,311 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:01,311 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:01,313 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:01,314 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:01,314 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:01,314 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:01,314 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:01,489 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:01,490 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:01,570 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:18:01,570 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:18:01,571 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpdr5ob600.
+2025-08-28 14:18:01,571 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:18:01,572 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:01,572 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:01,574 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmp_oox7awb.
+2025-08-28 14:18:01,574 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmp_oox7awb
+2025-08-28 14:18:01,916 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpdr5ob600/index.html
+2025-08-28 14:18:01,919 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:18:02,625 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:18:02,627 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:18:02,627 - kaleido.kaleido - INFO - Got 0673
+2025-08-28 14:18:02,627 - kaleido._kaleido_tab - INFO - Processing Jak_intenzivn_reaguje_na_slova_oproti_ostatnmbrsub_stylecolor7F8C8DTv_reakce_byly_klidnj_ne_u_44_astnksub.png
+2025-08-28 14:18:02,627 - kaleido._kaleido_tab - INFO - Sending big command for Jak_intenzivn_reaguje_na_slova_oproti_ostatnmbrsub_stylecolor7F8C8DTv_reakce_byly_klidnj_ne_u_44_astnksub.png.
+2025-08-28 14:18:02,771 - kaleido._kaleido_tab - INFO - Sent big command for Jak_intenzivn_reaguje_na_slova_oproti_ostatnmbrsub_stylecolor7F8C8DTv_reakce_byly_klidnj_ne_u_44_astnksub.png.
+2025-08-28 14:18:02,772 - kaleido.kaleido - INFO - Reloading tab 0673 before return.
+2025-08-28 14:18:03,457 - kaleido.kaleido - INFO - Putting tab 0673 back (queue size: 0).
+2025-08-28 14:18:03,457 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:18:03,458 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:18:03,458 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:03,459 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:03,459 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:03,459 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:03,459 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:03,461 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:03,461 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:03,461 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:03,462 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:03,462 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:03,693 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:03,693 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:03,773 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:18:03,774 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:18:03,774 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpbfblx0kh.
+2025-08-28 14:18:03,775 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:18:03,776 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpz6kaqq_i.
+2025-08-28 14:18:03,776 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpz6kaqq_i
+2025-08-28 14:18:04,135 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpbfblx0kh/index.html
+2025-08-28 14:18:04,138 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:18:04,874 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:18:04,875 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:18:04,875 - kaleido.kaleido - INFO - Got F077
+2025-08-28 14:18:04,875 - kaleido._kaleido_tab - INFO - Processing Tv_slova_v_emonm_prostoru.png
+2025-08-28 14:18:04,875 - kaleido._kaleido_tab - INFO - Sending big command for Tv_slova_v_emonm_prostoru.png.
+2025-08-28 14:18:04,961 - kaleido._kaleido_tab - INFO - Sent big command for Tv_slova_v_emonm_prostoru.png.
+2025-08-28 14:18:04,962 - kaleido.kaleido - INFO - Reloading tab F077 before return.
+2025-08-28 14:18:05,454 - kaleido.kaleido - INFO - Putting tab F077 back (queue size: 0).
+2025-08-28 14:18:05,454 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:18:05,454 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:18:05,455 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:05,455 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:05,455 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:05,455 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:05,456 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:05,457 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:05,457 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:05,457 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:05,458 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:05,458 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:05,604 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:05,604 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:05,693 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:18:05,693 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:18:05,695 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpnbjvnbs3.
+2025-08-28 14:18:05,696 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:18:05,697 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpp8smkk15.
+2025-08-28 14:18:05,697 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpp8smkk15
+2025-08-28 14:18:05,697 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:05,698 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:06,048 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpnbjvnbs3/index.html
+2025-08-28 14:18:06,050 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:18:07,013 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:18:07,016 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:18:07,017 - kaleido.kaleido - INFO - Got 4F87
+2025-08-28 14:18:07,019 - kaleido._kaleido_tab - INFO - Processing Emon_mapa_skupiny__tv_slova.png
+2025-08-28 14:18:07,020 - kaleido._kaleido_tab - INFO - Sending big command for Emon_mapa_skupiny__tv_slova.png.
+2025-08-28 14:18:07,576 - kaleido._kaleido_tab - INFO - Sent big command for Emon_mapa_skupiny__tv_slova.png.
+2025-08-28 14:18:07,580 - kaleido.kaleido - INFO - Reloading tab 4F87 before return.
+2025-08-28 14:18:08,386 - kaleido.kaleido - INFO - Putting tab 4F87 back (queue size: 0).
+2025-08-28 14:18:08,387 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:18:08,387 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:18:08,388 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:08,389 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:08,389 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:08,389 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:08,390 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:08,392 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:08,393 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:08,393 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:08,394 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:08,394 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:08,796 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:08,796 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:08,942 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:18:08,943 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:18:08,944 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpw1ve_96v.
+2025-08-28 14:18:08,945 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:18:08,946 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmphep4zhdf.
+2025-08-28 14:18:08,946 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmphep4zhdf
+2025-08-28 14:18:09,442 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpw1ve_96v/index.html
+2025-08-28 14:18:09,445 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:18:10,830 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:18:10,831 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:18:10,832 - kaleido.kaleido - INFO - Got 13BF
+2025-08-28 14:18:10,832 - kaleido._kaleido_tab - INFO - Processing Jak_se_mnila_tvoje_reakn_doba_bhem_kolu.png
+2025-08-28 14:18:10,832 - kaleido._kaleido_tab - INFO - Sending big command for Jak_se_mnila_tvoje_reakn_doba_bhem_kolu.png.
+2025-08-28 14:18:10,951 - kaleido._kaleido_tab - INFO - Sent big command for Jak_se_mnila_tvoje_reakn_doba_bhem_kolu.png.
+2025-08-28 14:18:10,953 - kaleido.kaleido - INFO - Reloading tab 13BF before return.
+2025-08-28 14:18:11,061 - kaleido.kaleido - INFO - Putting tab 13BF back (queue size: 0).
+2025-08-28 14:18:11,063 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:18:11,063 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:18:11,063 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:11,064 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:11,064 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:11,064 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:11,064 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:11,065 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:11,066 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:11,066 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:18:11,066 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:18:11,066 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:18:11,391 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:11,392 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:11,521 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: pdf_generated, Details: PDF report úspìšnì vygenerován
+2025-08-28 14:18:11,524 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:11,525 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:11,563 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: qualitative_analysis, Details: Zobrazeno 3 citátù
+2025-08-28 14:18:11,566 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: report_completed, Details: Uživatel dokonèil prohlížení reportu
+2025-08-28 14:18:11,644 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:11,645 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:18:11,645 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:18:11,648 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:42:35,706 - error_handler - INFO - Úspìšnì naèten soubor: data\vybrana_slova_30.csv, tvar: (30, 5)
+2025-08-28 14:42:35,717 - error_handler - INFO - Úspìšnì naèten soubor: data\hand_dataset.csv, tvar: (1140, 10)
+2025-08-28 14:42:35,719 - error_handler - INFO - Validace baseline dataset úspìšná
+2025-08-28 14:42:35,719 - error_handler - INFO - Validace hand dataset úspìšná
+2025-08-28 14:42:35,723 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
+2025-08-28 14:42:35,724 - error_handler - INFO - Data naètena za 0.03 sekund
+2025-08-28 14:42:35,736 - error_handler - INFO - Validace ID PCZ001 úspìšná
+2025-08-28 14:42:35,736 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: page_access, Details: Pøístup k osobnímu reportu
+2025-08-28 14:42:35,739 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: stats_calculated, Details: Words: 30, Avg RT: 6.80
+2025-08-28 14:42:36,000 - error_handler - ERROR - Chyba pøi vytváøení grafù pro PCZ001: Invalid property specified for object of type plotly.graph_objs.scatter.Marker: 'sizemax'
+
+Did you mean "sizemin"?
+
+    Valid properties:
+        angle
+            Sets the marker angle in respect to `angleref`.
+        angleref
+            Sets the reference for marker angle. With "previous",
+            angle 0 points along the line from the previous point
+            to this one. With "up", angle 0 points toward the top
+            of the screen.
+        anglesrc
+            Sets the source reference on Chart Studio Cloud for
+            `angle`.
+        autocolorscale
+            Determines whether the colorscale is a default palette
+            (`autocolorscale: true`) or the palette determined by
+            `marker.colorscale`. Has an effect only if in
+            `marker.color` is set to a numerical array. In case
+            `colorscale` is unspecified or `autocolorscale` is
+            true, the default palette will be chosen according to
+            whether numbers in the `color` array are all positive,
+            all negative or mixed.
+        cauto
+            Determines whether or not the color domain is computed
+            with respect to the input data (here in `marker.color`)
+            or the bounds set in `marker.cmin` and `marker.cmax`
+            Has an effect only if in `marker.color` is set to a
+            numerical array. Defaults to `false` when `marker.cmin`
+            and `marker.cmax` are set by the user.
+        cmax
+            Sets the upper bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmin` must be set as well.
+        cmid
+            Sets the mid-point of the color domain by scaling
+            `marker.cmin` and/or `marker.cmax` to be equidistant to
+            this point. Has an effect only if in `marker.color` is
+            set to a numerical array. Value should have the same
+            units as in `marker.color`. Has no effect when
+            `marker.cauto` is `false`.
+        cmin
+            Sets the lower bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmax` must be set as well.
+        color
+            Sets the marker color. It accepts either a specific
+            color or an array of numbers that are mapped to the
+            colorscale relative to the max and min values of the
+            array or relative to `marker.cmin` and `marker.cmax` if
+            set.
+        coloraxis
+            Sets a reference to a shared color axis. References to
+            these shared color axes are "coloraxis", "coloraxis2",
+            "coloraxis3", etc. Settings for these shared color axes
+            are set in the layout, under `layout.coloraxis`,
+            `layout.coloraxis2`, etc. Note that multiple color
+            scales can be linked to the same color axis.
+        colorbar
+            :class:`plotly.graph_objects.scatter.marker.ColorBar`
+            instance or dict with compatible properties
+        colorscale
+            Sets the colorscale. Has an effect only if in
+            `marker.color` is set to a numerical array. The
+            colorscale must be an array containing arrays mapping a
+            normalized value to an rgb, rgba, hex, hsl, hsv, or
+            named color string. At minimum, a mapping for the
+            lowest (0) and highest (1) values are required. For
+            example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`.
+            To control the bounds of the colorscale in color space,
+            use `marker.cmin` and `marker.cmax`. Alternatively,
+            `colorscale` may be a palette name string of the
+            following list: Blackbody,Bluered,Blues,Cividis,Earth,E
+            lectric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,Rd
+            Bu,Reds,Viridis,YlGnBu,YlOrRd.
+        colorsrc
+            Sets the source reference on Chart Studio Cloud for
+            `color`.
+        gradient
+            :class:`plotly.graph_objects.scatter.marker.Gradient`
+            instance or dict with compatible properties
+        line
+            :class:`plotly.graph_objects.scatter.marker.Line`
+            instance or dict with compatible properties
+        maxdisplayed
+            Sets a maximum number of points to be drawn on the
+            graph. 0 corresponds to no limit.
+        opacity
+            Sets the marker opacity.
+        opacitysrc
+            Sets the source reference on Chart Studio Cloud for
+            `opacity`.
+        reversescale
+            Reverses the color mapping if true. Has an effect only
+            if in `marker.color` is set to a numerical array. If
+            true, `marker.cmin` will correspond to the last color
+            in the array and `marker.cmax` will correspond to the
+            first color.
+        showscale
+            Determines whether or not a colorbar is displayed for
+            this trace. Has an effect only if in `marker.color` is
+            set to a numerical array.
+        size
+            Sets the marker size (in px).
+        sizemin
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the minimum size (in px) of the
+            rendered marker points.
+        sizemode
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the rule for which the data in
+            `size` is converted to pixels.
+        sizeref
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the scale factor used to
+            determine the rendered size of marker points. Use with
+            `sizemin` and `sizemode`.
+        sizesrc
+            Sets the source reference on Chart Studio Cloud for
+            `size`.
+        standoff
+            Moves the marker away from the data point in the
+            direction of `angle` (in px). This can be useful for
+            example if you have another marker at this location and
+            you want to point an arrowhead marker at it.
+        standoffsrc
+            Sets the source reference on Chart Studio Cloud for
+            `standoff`.
+        symbol
+            Sets the marker symbol type. Adding 100 is equivalent
+            to appending "-open" to a symbol name. Adding 200 is
+            equivalent to appending "-dot" to a symbol name. Adding
+            300 is equivalent to appending "-open-dot" or "dot-
+            open" to a symbol name.
+        symbolsrc
+            Sets the source reference on Chart Studio Cloud for
+            `symbol`.
+        
+Did you mean "sizemin"?
+
+Bad property path:
+sizemax
+^^^^^^^
+2025-08-28 14:42:36,008 - error_handler - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Obsidian\SecondBrain\SB\vyzkumdata\app.py", line 429, in main
+    fig_scatter.update_traces(
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\graph_objs\_figure.py", line 188, in update_traces
+    return super().update_traces(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 1388, in update_traces
+    trace.update(patch, overwrite=overwrite, **kwargs)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 5195, in update
+    BaseFigure._perform_update(self, kwargs, overwrite=overwrite)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 3971, in _perform_update
+    BaseFigure._perform_update(plotly_obj[key], val)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 3949, in _perform_update
+    raise err
+ValueError: Invalid property specified for object of type plotly.graph_objs.scatter.Marker: 'sizemax'
+
+Did you mean "sizemin"?
+
+    Valid properties:
+        angle
+            Sets the marker angle in respect to `angleref`.
+        angleref
+            Sets the reference for marker angle. With "previous",
+            angle 0 points along the line from the previous point
+            to this one. With "up", angle 0 points toward the top
+            of the screen.
+        anglesrc
+            Sets the source reference on Chart Studio Cloud for
+            `angle`.
+        autocolorscale
+            Determines whether the colorscale is a default palette
+            (`autocolorscale: true`) or the palette determined by
+            `marker.colorscale`. Has an effect only if in
+            `marker.color` is set to a numerical array. In case
+            `colorscale` is unspecified or `autocolorscale` is
+            true, the default palette will be chosen according to
+            whether numbers in the `color` array are all positive,
+            all negative or mixed.
+        cauto
+            Determines whether or not the color domain is computed
+            with respect to the input data (here in `marker.color`)
+            or the bounds set in `marker.cmin` and `marker.cmax`
+            Has an effect only if in `marker.color` is set to a
+            numerical array. Defaults to `false` when `marker.cmin`
+            and `marker.cmax` are set by the user.
+        cmax
+            Sets the upper bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmin` must be set as well.
+        cmid
+            Sets the mid-point of the color domain by scaling
+            `marker.cmin` and/or `marker.cmax` to be equidistant to
+            this point. Has an effect only if in `marker.color` is
+            set to a numerical array. Value should have the same
+            units as in `marker.color`. Has no effect when
+            `marker.cauto` is `false`.
+        cmin
+            Sets the lower bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmax` must be set as well.
+        color
+            Sets the marker color. It accepts either a specific
+            color or an array of numbers that are mapped to the
+            colorscale relative to the max and min values of the
+            array or relative to `marker.cmin` and `marker.cmax` if
+            set.
+        coloraxis
+            Sets a reference to a shared color axis. References to
+            these shared color axes are "coloraxis", "coloraxis2",
+            "coloraxis3", etc. Settings for these shared color axes
+            are set in the layout, under `layout.coloraxis`,
+            `layout.coloraxis2`, etc. Note that multiple color
+            scales can be linked to the same color axis.
+        colorbar
+            :class:`plotly.graph_objects.scatter.marker.ColorBar`
+            instance or dict with compatible properties
+        colorscale
+            Sets the colorscale. Has an effect only if in
+            `marker.color` is set to a numerical array. The
+            colorscale must be an array containing arrays mapping a
+            normalized value to an rgb, rgba, hex, hsl, hsv, or
+            named color string. At minimum, a mapping for the
+            lowest (0) and highest (1) values are required. For
+            example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`.
+            To control the bounds of the colorscale in color space,
+            use `marker.cmin` and `marker.cmax`. Alternatively,
+            `colorscale` may be a palette name string of the
+            following list: Blackbody,Bluered,Blues,Cividis,Earth,E
+            lectric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,Rd
+            Bu,Reds,Viridis,YlGnBu,YlOrRd.
+        colorsrc
+            Sets the source reference on Chart Studio Cloud for
+            `color`.
+        gradient
+            :class:`plotly.graph_objects.scatter.marker.Gradient`
+            instance or dict with compatible properties
+        line
+            :class:`plotly.graph_objects.scatter.marker.Line`
+            instance or dict with compatible properties
+        maxdisplayed
+            Sets a maximum number of points to be drawn on the
+            graph. 0 corresponds to no limit.
+        opacity
+            Sets the marker opacity.
+        opacitysrc
+            Sets the source reference on Chart Studio Cloud for
+            `opacity`.
+        reversescale
+            Reverses the color mapping if true. Has an effect only
+            if in `marker.color` is set to a numerical array. If
+            true, `marker.cmin` will correspond to the last color
+            in the array and `marker.cmax` will correspond to the
+            first color.
+        showscale
+            Determines whether or not a colorbar is displayed for
+            this trace. Has an effect only if in `marker.color` is
+            set to a numerical array.
+        size
+            Sets the marker size (in px).
+        sizemin
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the minimum size (in px) of the
+            rendered marker points.
+        sizemode
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the rule for which the data in
+            `size` is converted to pixels.
+        sizeref
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the scale factor used to
+            determine the rendered size of marker points. Use with
+            `sizemin` and `sizemode`.
+        sizesrc
+            Sets the source reference on Chart Studio Cloud for
+            `size`.
+        standoff
+            Moves the marker away from the data point in the
+            direction of `angle` (in px). This can be useful for
+            example if you have another marker at this location and
+            you want to point an arrowhead marker at it.
+        standoffsrc
+            Sets the source reference on Chart Studio Cloud for
+            `standoff`.
+        symbol
+            Sets the marker symbol type. Adding 100 is equivalent
+            to appending "-open" to a symbol name. Adding 200 is
+            equivalent to appending "-dot" to a symbol name. Adding
+            300 is equivalent to appending "-open-dot" or "dot-
+            open" to a symbol name.
+        symbolsrc
+            Sets the source reference on Chart Studio Cloud for
+            `symbol`.
+        
+Did you mean "sizemin"?
+
+Bad property path:
+sizemax
+^^^^^^^
+
+2025-08-28 14:42:44,369 - error_handler - INFO - Validace ID PCZ001 úspìšná
+2025-08-28 14:42:44,370 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: page_access, Details: Pøístup k osobnímu reportu
+2025-08-28 14:42:44,373 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: stats_calculated, Details: Words: 30, Avg RT: 6.80
+2025-08-28 14:42:44,445 - error_handler - ERROR - Chyba pøi vytváøení grafù pro PCZ001: Invalid property specified for object of type plotly.graph_objs.scatter.Marker: 'sizemax'
+
+Did you mean "sizemin"?
+
+    Valid properties:
+        angle
+            Sets the marker angle in respect to `angleref`.
+        angleref
+            Sets the reference for marker angle. With "previous",
+            angle 0 points along the line from the previous point
+            to this one. With "up", angle 0 points toward the top
+            of the screen.
+        anglesrc
+            Sets the source reference on Chart Studio Cloud for
+            `angle`.
+        autocolorscale
+            Determines whether the colorscale is a default palette
+            (`autocolorscale: true`) or the palette determined by
+            `marker.colorscale`. Has an effect only if in
+            `marker.color` is set to a numerical array. In case
+            `colorscale` is unspecified or `autocolorscale` is
+            true, the default palette will be chosen according to
+            whether numbers in the `color` array are all positive,
+            all negative or mixed.
+        cauto
+            Determines whether or not the color domain is computed
+            with respect to the input data (here in `marker.color`)
+            or the bounds set in `marker.cmin` and `marker.cmax`
+            Has an effect only if in `marker.color` is set to a
+            numerical array. Defaults to `false` when `marker.cmin`
+            and `marker.cmax` are set by the user.
+        cmax
+            Sets the upper bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmin` must be set as well.
+        cmid
+            Sets the mid-point of the color domain by scaling
+            `marker.cmin` and/or `marker.cmax` to be equidistant to
+            this point. Has an effect only if in `marker.color` is
+            set to a numerical array. Value should have the same
+            units as in `marker.color`. Has no effect when
+            `marker.cauto` is `false`.
+        cmin
+            Sets the lower bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmax` must be set as well.
+        color
+            Sets the marker color. It accepts either a specific
+            color or an array of numbers that are mapped to the
+            colorscale relative to the max and min values of the
+            array or relative to `marker.cmin` and `marker.cmax` if
+            set.
+        coloraxis
+            Sets a reference to a shared color axis. References to
+            these shared color axes are "coloraxis", "coloraxis2",
+            "coloraxis3", etc. Settings for these shared color axes
+            are set in the layout, under `layout.coloraxis`,
+            `layout.coloraxis2`, etc. Note that multiple color
+            scales can be linked to the same color axis.
+        colorbar
+            :class:`plotly.graph_objects.scatter.marker.ColorBar`
+            instance or dict with compatible properties
+        colorscale
+            Sets the colorscale. Has an effect only if in
+            `marker.color` is set to a numerical array. The
+            colorscale must be an array containing arrays mapping a
+            normalized value to an rgb, rgba, hex, hsl, hsv, or
+            named color string. At minimum, a mapping for the
+            lowest (0) and highest (1) values are required. For
+            example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`.
+            To control the bounds of the colorscale in color space,
+            use `marker.cmin` and `marker.cmax`. Alternatively,
+            `colorscale` may be a palette name string of the
+            following list: Blackbody,Bluered,Blues,Cividis,Earth,E
+            lectric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,Rd
+            Bu,Reds,Viridis,YlGnBu,YlOrRd.
+        colorsrc
+            Sets the source reference on Chart Studio Cloud for
+            `color`.
+        gradient
+            :class:`plotly.graph_objects.scatter.marker.Gradient`
+            instance or dict with compatible properties
+        line
+            :class:`plotly.graph_objects.scatter.marker.Line`
+            instance or dict with compatible properties
+        maxdisplayed
+            Sets a maximum number of points to be drawn on the
+            graph. 0 corresponds to no limit.
+        opacity
+            Sets the marker opacity.
+        opacitysrc
+            Sets the source reference on Chart Studio Cloud for
+            `opacity`.
+        reversescale
+            Reverses the color mapping if true. Has an effect only
+            if in `marker.color` is set to a numerical array. If
+            true, `marker.cmin` will correspond to the last color
+            in the array and `marker.cmax` will correspond to the
+            first color.
+        showscale
+            Determines whether or not a colorbar is displayed for
+            this trace. Has an effect only if in `marker.color` is
+            set to a numerical array.
+        size
+            Sets the marker size (in px).
+        sizemin
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the minimum size (in px) of the
+            rendered marker points.
+        sizemode
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the rule for which the data in
+            `size` is converted to pixels.
+        sizeref
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the scale factor used to
+            determine the rendered size of marker points. Use with
+            `sizemin` and `sizemode`.
+        sizesrc
+            Sets the source reference on Chart Studio Cloud for
+            `size`.
+        standoff
+            Moves the marker away from the data point in the
+            direction of `angle` (in px). This can be useful for
+            example if you have another marker at this location and
+            you want to point an arrowhead marker at it.
+        standoffsrc
+            Sets the source reference on Chart Studio Cloud for
+            `standoff`.
+        symbol
+            Sets the marker symbol type. Adding 100 is equivalent
+            to appending "-open" to a symbol name. Adding 200 is
+            equivalent to appending "-dot" to a symbol name. Adding
+            300 is equivalent to appending "-open-dot" or "dot-
+            open" to a symbol name.
+        symbolsrc
+            Sets the source reference on Chart Studio Cloud for
+            `symbol`.
+        
+Did you mean "sizemin"?
+
+Bad property path:
+sizemax
+^^^^^^^
+2025-08-28 14:42:44,447 - error_handler - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Obsidian\SecondBrain\SB\vyzkumdata\app.py", line 429, in main
+    fig_scatter.update_traces(
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\graph_objs\_figure.py", line 188, in update_traces
+    return super().update_traces(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 1388, in update_traces
+    trace.update(patch, overwrite=overwrite, **kwargs)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 5195, in update
+    BaseFigure._perform_update(self, kwargs, overwrite=overwrite)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 3971, in _perform_update
+    BaseFigure._perform_update(plotly_obj[key], val)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 3949, in _perform_update
+    raise err
+ValueError: Invalid property specified for object of type plotly.graph_objs.scatter.Marker: 'sizemax'
+
+Did you mean "sizemin"?
+
+    Valid properties:
+        angle
+            Sets the marker angle in respect to `angleref`.
+        angleref
+            Sets the reference for marker angle. With "previous",
+            angle 0 points along the line from the previous point
+            to this one. With "up", angle 0 points toward the top
+            of the screen.
+        anglesrc
+            Sets the source reference on Chart Studio Cloud for
+            `angle`.
+        autocolorscale
+            Determines whether the colorscale is a default palette
+            (`autocolorscale: true`) or the palette determined by
+            `marker.colorscale`. Has an effect only if in
+            `marker.color` is set to a numerical array. In case
+            `colorscale` is unspecified or `autocolorscale` is
+            true, the default palette will be chosen according to
+            whether numbers in the `color` array are all positive,
+            all negative or mixed.
+        cauto
+            Determines whether or not the color domain is computed
+            with respect to the input data (here in `marker.color`)
+            or the bounds set in `marker.cmin` and `marker.cmax`
+            Has an effect only if in `marker.color` is set to a
+            numerical array. Defaults to `false` when `marker.cmin`
+            and `marker.cmax` are set by the user.
+        cmax
+            Sets the upper bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmin` must be set as well.
+        cmid
+            Sets the mid-point of the color domain by scaling
+            `marker.cmin` and/or `marker.cmax` to be equidistant to
+            this point. Has an effect only if in `marker.color` is
+            set to a numerical array. Value should have the same
+            units as in `marker.color`. Has no effect when
+            `marker.cauto` is `false`.
+        cmin
+            Sets the lower bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmax` must be set as well.
+        color
+            Sets the marker color. It accepts either a specific
+            color or an array of numbers that are mapped to the
+            colorscale relative to the max and min values of the
+            array or relative to `marker.cmin` and `marker.cmax` if
+            set.
+        coloraxis
+            Sets a reference to a shared color axis. References to
+            these shared color axes are "coloraxis", "coloraxis2",
+            "coloraxis3", etc. Settings for these shared color axes
+            are set in the layout, under `layout.coloraxis`,
+            `layout.coloraxis2`, etc. Note that multiple color
+            scales can be linked to the same color axis.
+        colorbar
+            :class:`plotly.graph_objects.scatter.marker.ColorBar`
+            instance or dict with compatible properties
+        colorscale
+            Sets the colorscale. Has an effect only if in
+            `marker.color` is set to a numerical array. The
+            colorscale must be an array containing arrays mapping a
+            normalized value to an rgb, rgba, hex, hsl, hsv, or
+            named color string. At minimum, a mapping for the
+            lowest (0) and highest (1) values are required. For
+            example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`.
+            To control the bounds of the colorscale in color space,
+            use `marker.cmin` and `marker.cmax`. Alternatively,
+            `colorscale` may be a palette name string of the
+            following list: Blackbody,Bluered,Blues,Cividis,Earth,E
+            lectric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,Rd
+            Bu,Reds,Viridis,YlGnBu,YlOrRd.
+        colorsrc
+            Sets the source reference on Chart Studio Cloud for
+            `color`.
+        gradient
+            :class:`plotly.graph_objects.scatter.marker.Gradient`
+            instance or dict with compatible properties
+        line
+            :class:`plotly.graph_objects.scatter.marker.Line`
+            instance or dict with compatible properties
+        maxdisplayed
+            Sets a maximum number of points to be drawn on the
+            graph. 0 corresponds to no limit.
+        opacity
+            Sets the marker opacity.
+        opacitysrc
+            Sets the source reference on Chart Studio Cloud for
+            `opacity`.
+        reversescale
+            Reverses the color mapping if true. Has an effect only
+            if in `marker.color` is set to a numerical array. If
+            true, `marker.cmin` will correspond to the last color
+            in the array and `marker.cmax` will correspond to the
+            first color.
+        showscale
+            Determines whether or not a colorbar is displayed for
+            this trace. Has an effect only if in `marker.color` is
+            set to a numerical array.
+        size
+            Sets the marker size (in px).
+        sizemin
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the minimum size (in px) of the
+            rendered marker points.
+        sizemode
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the rule for which the data in
+            `size` is converted to pixels.
+        sizeref
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the scale factor used to
+            determine the rendered size of marker points. Use with
+            `sizemin` and `sizemode`.
+        sizesrc
+            Sets the source reference on Chart Studio Cloud for
+            `size`.
+        standoff
+            Moves the marker away from the data point in the
+            direction of `angle` (in px). This can be useful for
+            example if you have another marker at this location and
+            you want to point an arrowhead marker at it.
+        standoffsrc
+            Sets the source reference on Chart Studio Cloud for
+            `standoff`.
+        symbol
+            Sets the marker symbol type. Adding 100 is equivalent
+            to appending "-open" to a symbol name. Adding 200 is
+            equivalent to appending "-dot" to a symbol name. Adding
+            300 is equivalent to appending "-open-dot" or "dot-
+            open" to a symbol name.
+        symbolsrc
+            Sets the source reference on Chart Studio Cloud for
+            `symbol`.
+        
+Did you mean "sizemin"?
+
+Bad property path:
+sizemax
+^^^^^^^
+
+2025-08-28 14:42:44,515 - error_handler - INFO - Validace ID PCZ001 úspìšná
+2025-08-28 14:42:44,516 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: page_access, Details: Pøístup k osobnímu reportu
+2025-08-28 14:42:44,518 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: stats_calculated, Details: Words: 30, Avg RT: 6.80
+2025-08-28 14:42:44,601 - error_handler - ERROR - Chyba pøi vytváøení grafù pro PCZ001: Invalid property specified for object of type plotly.graph_objs.scatter.Marker: 'sizemax'
+
+Did you mean "sizemin"?
+
+    Valid properties:
+        angle
+            Sets the marker angle in respect to `angleref`.
+        angleref
+            Sets the reference for marker angle. With "previous",
+            angle 0 points along the line from the previous point
+            to this one. With "up", angle 0 points toward the top
+            of the screen.
+        anglesrc
+            Sets the source reference on Chart Studio Cloud for
+            `angle`.
+        autocolorscale
+            Determines whether the colorscale is a default palette
+            (`autocolorscale: true`) or the palette determined by
+            `marker.colorscale`. Has an effect only if in
+            `marker.color` is set to a numerical array. In case
+            `colorscale` is unspecified or `autocolorscale` is
+            true, the default palette will be chosen according to
+            whether numbers in the `color` array are all positive,
+            all negative or mixed.
+        cauto
+            Determines whether or not the color domain is computed
+            with respect to the input data (here in `marker.color`)
+            or the bounds set in `marker.cmin` and `marker.cmax`
+            Has an effect only if in `marker.color` is set to a
+            numerical array. Defaults to `false` when `marker.cmin`
+            and `marker.cmax` are set by the user.
+        cmax
+            Sets the upper bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmin` must be set as well.
+        cmid
+            Sets the mid-point of the color domain by scaling
+            `marker.cmin` and/or `marker.cmax` to be equidistant to
+            this point. Has an effect only if in `marker.color` is
+            set to a numerical array. Value should have the same
+            units as in `marker.color`. Has no effect when
+            `marker.cauto` is `false`.
+        cmin
+            Sets the lower bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmax` must be set as well.
+        color
+            Sets the marker color. It accepts either a specific
+            color or an array of numbers that are mapped to the
+            colorscale relative to the max and min values of the
+            array or relative to `marker.cmin` and `marker.cmax` if
+            set.
+        coloraxis
+            Sets a reference to a shared color axis. References to
+            these shared color axes are "coloraxis", "coloraxis2",
+            "coloraxis3", etc. Settings for these shared color axes
+            are set in the layout, under `layout.coloraxis`,
+            `layout.coloraxis2`, etc. Note that multiple color
+            scales can be linked to the same color axis.
+        colorbar
+            :class:`plotly.graph_objects.scatter.marker.ColorBar`
+            instance or dict with compatible properties
+        colorscale
+            Sets the colorscale. Has an effect only if in
+            `marker.color` is set to a numerical array. The
+            colorscale must be an array containing arrays mapping a
+            normalized value to an rgb, rgba, hex, hsl, hsv, or
+            named color string. At minimum, a mapping for the
+            lowest (0) and highest (1) values are required. For
+            example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`.
+            To control the bounds of the colorscale in color space,
+            use `marker.cmin` and `marker.cmax`. Alternatively,
+            `colorscale` may be a palette name string of the
+            following list: Blackbody,Bluered,Blues,Cividis,Earth,E
+            lectric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,Rd
+            Bu,Reds,Viridis,YlGnBu,YlOrRd.
+        colorsrc
+            Sets the source reference on Chart Studio Cloud for
+            `color`.
+        gradient
+            :class:`plotly.graph_objects.scatter.marker.Gradient`
+            instance or dict with compatible properties
+        line
+            :class:`plotly.graph_objects.scatter.marker.Line`
+            instance or dict with compatible properties
+        maxdisplayed
+            Sets a maximum number of points to be drawn on the
+            graph. 0 corresponds to no limit.
+        opacity
+            Sets the marker opacity.
+        opacitysrc
+            Sets the source reference on Chart Studio Cloud for
+            `opacity`.
+        reversescale
+            Reverses the color mapping if true. Has an effect only
+            if in `marker.color` is set to a numerical array. If
+            true, `marker.cmin` will correspond to the last color
+            in the array and `marker.cmax` will correspond to the
+            first color.
+        showscale
+            Determines whether or not a colorbar is displayed for
+            this trace. Has an effect only if in `marker.color` is
+            set to a numerical array.
+        size
+            Sets the marker size (in px).
+        sizemin
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the minimum size (in px) of the
+            rendered marker points.
+        sizemode
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the rule for which the data in
+            `size` is converted to pixels.
+        sizeref
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the scale factor used to
+            determine the rendered size of marker points. Use with
+            `sizemin` and `sizemode`.
+        sizesrc
+            Sets the source reference on Chart Studio Cloud for
+            `size`.
+        standoff
+            Moves the marker away from the data point in the
+            direction of `angle` (in px). This can be useful for
+            example if you have another marker at this location and
+            you want to point an arrowhead marker at it.
+        standoffsrc
+            Sets the source reference on Chart Studio Cloud for
+            `standoff`.
+        symbol
+            Sets the marker symbol type. Adding 100 is equivalent
+            to appending "-open" to a symbol name. Adding 200 is
+            equivalent to appending "-dot" to a symbol name. Adding
+            300 is equivalent to appending "-open-dot" or "dot-
+            open" to a symbol name.
+        symbolsrc
+            Sets the source reference on Chart Studio Cloud for
+            `symbol`.
+        
+Did you mean "sizemin"?
+
+Bad property path:
+sizemax
+^^^^^^^
+2025-08-28 14:42:44,604 - error_handler - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Obsidian\SecondBrain\SB\vyzkumdata\app.py", line 429, in main
+    fig_scatter.update_traces(
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\graph_objs\_figure.py", line 188, in update_traces
+    return super().update_traces(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 1388, in update_traces
+    trace.update(patch, overwrite=overwrite, **kwargs)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 5195, in update
+    BaseFigure._perform_update(self, kwargs, overwrite=overwrite)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 3971, in _perform_update
+    BaseFigure._perform_update(plotly_obj[key], val)
+  File "C:\Users\bunni\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 3949, in _perform_update
+    raise err
+ValueError: Invalid property specified for object of type plotly.graph_objs.scatter.Marker: 'sizemax'
+
+Did you mean "sizemin"?
+
+    Valid properties:
+        angle
+            Sets the marker angle in respect to `angleref`.
+        angleref
+            Sets the reference for marker angle. With "previous",
+            angle 0 points along the line from the previous point
+            to this one. With "up", angle 0 points toward the top
+            of the screen.
+        anglesrc
+            Sets the source reference on Chart Studio Cloud for
+            `angle`.
+        autocolorscale
+            Determines whether the colorscale is a default palette
+            (`autocolorscale: true`) or the palette determined by
+            `marker.colorscale`. Has an effect only if in
+            `marker.color` is set to a numerical array. In case
+            `colorscale` is unspecified or `autocolorscale` is
+            true, the default palette will be chosen according to
+            whether numbers in the `color` array are all positive,
+            all negative or mixed.
+        cauto
+            Determines whether or not the color domain is computed
+            with respect to the input data (here in `marker.color`)
+            or the bounds set in `marker.cmin` and `marker.cmax`
+            Has an effect only if in `marker.color` is set to a
+            numerical array. Defaults to `false` when `marker.cmin`
+            and `marker.cmax` are set by the user.
+        cmax
+            Sets the upper bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmin` must be set as well.
+        cmid
+            Sets the mid-point of the color domain by scaling
+            `marker.cmin` and/or `marker.cmax` to be equidistant to
+            this point. Has an effect only if in `marker.color` is
+            set to a numerical array. Value should have the same
+            units as in `marker.color`. Has no effect when
+            `marker.cauto` is `false`.
+        cmin
+            Sets the lower bound of the color domain. Has an effect
+            only if in `marker.color` is set to a numerical array.
+            Value should have the same units as in `marker.color`
+            and if set, `marker.cmax` must be set as well.
+        color
+            Sets the marker color. It accepts either a specific
+            color or an array of numbers that are mapped to the
+            colorscale relative to the max and min values of the
+            array or relative to `marker.cmin` and `marker.cmax` if
+            set.
+        coloraxis
+            Sets a reference to a shared color axis. References to
+            these shared color axes are "coloraxis", "coloraxis2",
+            "coloraxis3", etc. Settings for these shared color axes
+            are set in the layout, under `layout.coloraxis`,
+            `layout.coloraxis2`, etc. Note that multiple color
+            scales can be linked to the same color axis.
+        colorbar
+            :class:`plotly.graph_objects.scatter.marker.ColorBar`
+            instance or dict with compatible properties
+        colorscale
+            Sets the colorscale. Has an effect only if in
+            `marker.color` is set to a numerical array. The
+            colorscale must be an array containing arrays mapping a
+            normalized value to an rgb, rgba, hex, hsl, hsv, or
+            named color string. At minimum, a mapping for the
+            lowest (0) and highest (1) values are required. For
+            example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`.
+            To control the bounds of the colorscale in color space,
+            use `marker.cmin` and `marker.cmax`. Alternatively,
+            `colorscale` may be a palette name string of the
+            following list: Blackbody,Bluered,Blues,Cividis,Earth,E
+            lectric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,Rd
+            Bu,Reds,Viridis,YlGnBu,YlOrRd.
+        colorsrc
+            Sets the source reference on Chart Studio Cloud for
+            `color`.
+        gradient
+            :class:`plotly.graph_objects.scatter.marker.Gradient`
+            instance or dict with compatible properties
+        line
+            :class:`plotly.graph_objects.scatter.marker.Line`
+            instance or dict with compatible properties
+        maxdisplayed
+            Sets a maximum number of points to be drawn on the
+            graph. 0 corresponds to no limit.
+        opacity
+            Sets the marker opacity.
+        opacitysrc
+            Sets the source reference on Chart Studio Cloud for
+            `opacity`.
+        reversescale
+            Reverses the color mapping if true. Has an effect only
+            if in `marker.color` is set to a numerical array. If
+            true, `marker.cmin` will correspond to the last color
+            in the array and `marker.cmax` will correspond to the
+            first color.
+        showscale
+            Determines whether or not a colorbar is displayed for
+            this trace. Has an effect only if in `marker.color` is
+            set to a numerical array.
+        size
+            Sets the marker size (in px).
+        sizemin
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the minimum size (in px) of the
+            rendered marker points.
+        sizemode
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the rule for which the data in
+            `size` is converted to pixels.
+        sizeref
+            Has an effect only if `marker.size` is set to a
+            numerical array. Sets the scale factor used to
+            determine the rendered size of marker points. Use with
+            `sizemin` and `sizemode`.
+        sizesrc
+            Sets the source reference on Chart Studio Cloud for
+            `size`.
+        standoff
+            Moves the marker away from the data point in the
+            direction of `angle` (in px). This can be useful for
+            example if you have another marker at this location and
+            you want to point an arrowhead marker at it.
+        standoffsrc
+            Sets the source reference on Chart Studio Cloud for
+            `standoff`.
+        symbol
+            Sets the marker symbol type. Adding 100 is equivalent
+            to appending "-open" to a symbol name. Adding 200 is
+            equivalent to appending "-dot" to a symbol name. Adding
+            300 is equivalent to appending "-open-dot" or "dot-
+            open" to a symbol name.
+        symbolsrc
+            Sets the source reference on Chart Studio Cloud for
+            `symbol`.
+        
+Did you mean "sizemin"?
+
+Bad property path:
+sizemax
+^^^^^^^
+
+2025-08-28 14:55:25,799 - error_handler - INFO - Úspìšnì naèten soubor: data\vybrana_slova_30.csv, tvar: (30, 5)
+2025-08-28 14:55:25,813 - error_handler - INFO - Úspìšnì naèten soubor: data\hand_dataset.csv, tvar: (1140, 10)
+2025-08-28 14:55:25,816 - error_handler - INFO - Validace baseline dataset úspìšná
+2025-08-28 14:55:25,816 - error_handler - INFO - Validace hand dataset úspìšná
+2025-08-28 14:55:25,820 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
+2025-08-28 14:55:25,821 - error_handler - INFO - Data naètena za 0.03 sekund
+2025-08-28 14:55:25,833 - error_handler - ERROR - ID uživatele je prázdné
+2025-08-28 14:55:35,801 - error_handler - INFO - Validace ID PCZ001 úspìšná
+2025-08-28 14:55:35,802 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: page_access, Details: Pøístup k osobnímu reportu
+2025-08-28 14:55:35,806 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: stats_calculated, Details: Words: 30, Avg RT: 6.80
+2025-08-28 14:55:36,207 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: charts_created, Details: Všechny grafy úspìšnì vytvoøeny
+2025-08-28 14:55:36,210 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: insights_generated, Details: Generováno 5 insightù
+2025-08-28 14:55:36,419 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:55:36,421 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:55:36,424 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpvoidi0ap.
+2025-08-28 14:55:36,425 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:55:36,428 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmp1f1u24en.
+2025-08-28 14:55:36,428 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmp1f1u24en
+2025-08-28 14:55:36,993 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpvoidi0ap/index.html
+2025-08-28 14:55:36,994 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:55:37,849 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:55:37,850 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:55:37,851 - kaleido.kaleido - INFO - Got 290E
+2025-08-28 14:55:37,851 - kaleido._kaleido_tab - INFO - Processing bTvj_emon_radarb.png
+2025-08-28 14:55:37,851 - kaleido._kaleido_tab - INFO - Sending big command for bTvj_emon_radarb.png.
+2025-08-28 14:55:38,002 - kaleido._kaleido_tab - INFO - Sent big command for bTvj_emon_radarb.png.
+2025-08-28 14:55:38,005 - kaleido.kaleido - INFO - Reloading tab 290E before return.
+2025-08-28 14:55:38,792 - kaleido.kaleido - INFO - Putting tab 290E back (queue size: 0).
+2025-08-28 14:55:38,792 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:55:38,792 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:55:38,793 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:38,794 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:38,794 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:38,794 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:38,794 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:38,796 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:38,797 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:38,797 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:38,797 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:38,798 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:39,407 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:39,409 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:39,547 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:55:39,547 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:55:39,548 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmp14d3c2tw.
+2025-08-28 14:55:39,550 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:55:39,551 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpstkamyz4.
+2025-08-28 14:55:39,551 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpstkamyz4
+2025-08-28 14:55:39,949 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmp14d3c2tw/index.html
+2025-08-28 14:55:39,954 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:55:41,366 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:55:41,368 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:55:41,368 - kaleido.kaleido - INFO - Got CAEA
+2025-08-28 14:55:41,369 - kaleido._kaleido_tab - INFO - Processing bJak_vnm_pjemnost_slov_oproti_ostatnmbbrspan_stylecolor6B7280_font_size13pxTvoje_hodnocen_bylo_pozitivnj_ne_u_56_astnkspan.png
+2025-08-28 14:55:41,369 - kaleido._kaleido_tab - INFO - Sending big command for bJak_vnm_pjemnost_slov_oproti_ostatnmbbrspan_stylecolor6B7280_font_size13pxTvoje_hodnocen_bylo_pozitivnj_ne_u_56_astnkspan.png.
+2025-08-28 14:55:41,562 - kaleido._kaleido_tab - INFO - Sent big command for bJak_vnm_pjemnost_slov_oproti_ostatnmbbrspan_stylecolor6B7280_font_size13pxTvoje_hodnocen_bylo_pozitivnj_ne_u_56_astnkspan.png.
+2025-08-28 14:55:41,563 - kaleido.kaleido - INFO - Reloading tab CAEA before return.
+2025-08-28 14:55:42,342 - kaleido.kaleido - INFO - Putting tab CAEA back (queue size: 0).
+2025-08-28 14:55:42,342 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:55:42,342 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:55:42,344 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:42,345 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:42,345 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:42,345 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:42,345 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:42,346 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:42,347 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:42,347 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:42,347 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:42,347 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:42,746 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:42,748 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:42,833 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:42,834 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:42,837 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:55:42,839 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:55:42,840 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpq24x5zct.
+2025-08-28 14:55:42,842 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:55:42,843 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpscuks7lo.
+2025-08-28 14:55:42,844 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpscuks7lo
+2025-08-28 14:55:43,372 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpq24x5zct/index.html
+2025-08-28 14:55:43,373 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:55:44,390 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:55:44,392 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:55:44,392 - kaleido.kaleido - INFO - Got 6708
+2025-08-28 14:55:44,392 - kaleido._kaleido_tab - INFO - Processing bJak_intenzivn_reaguje_na_slova_oproti_ostatnmbbrspan_stylecolor6B7280_font_size13pxTv_reakce_byly_klidnj_ne_u_44_astnkspan.png
+2025-08-28 14:55:44,392 - kaleido._kaleido_tab - INFO - Sending big command for bJak_intenzivn_reaguje_na_slova_oproti_ostatnmbbrspan_stylecolor6B7280_font_size13pxTv_reakce_byly_klidnj_ne_u_44_astnkspan.png.
+2025-08-28 14:55:44,607 - kaleido._kaleido_tab - INFO - Sent big command for bJak_intenzivn_reaguje_na_slova_oproti_ostatnmbbrspan_stylecolor6B7280_font_size13pxTv_reakce_byly_klidnj_ne_u_44_astnkspan.png.
+2025-08-28 14:55:44,608 - kaleido.kaleido - INFO - Reloading tab 6708 before return.
+2025-08-28 14:55:45,393 - kaleido.kaleido - INFO - Putting tab 6708 back (queue size: 0).
+2025-08-28 14:55:45,393 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:55:45,393 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:55:45,395 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:45,395 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:45,396 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:45,396 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:45,396 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:45,410 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:45,413 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:45,415 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:45,421 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:45,422 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:46,164 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:46,165 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:46,343 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:55:46,349 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:55:46,350 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmp9pwcbav_.
+2025-08-28 14:55:46,352 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:55:46,359 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpf5x2m7am.
+2025-08-28 14:55:46,360 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpf5x2m7am
+2025-08-28 14:55:47,009 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmp9pwcbav_/index.html
+2025-08-28 14:55:47,010 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:55:48,215 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:55:48,217 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:55:48,217 - kaleido.kaleido - INFO - Got 8702
+2025-08-28 14:55:48,217 - kaleido._kaleido_tab - INFO - Processing bTv_slova_v_emonm_prostorub.png
+2025-08-28 14:55:48,217 - kaleido._kaleido_tab - INFO - Sending big command for bTv_slova_v_emonm_prostorub.png.
+2025-08-28 14:55:48,429 - kaleido._kaleido_tab - INFO - Sent big command for bTv_slova_v_emonm_prostorub.png.
+2025-08-28 14:55:48,430 - kaleido.kaleido - INFO - Reloading tab 8702 before return.
+2025-08-28 14:55:49,153 - kaleido.kaleido - INFO - Putting tab 8702 back (queue size: 0).
+2025-08-28 14:55:49,154 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:55:49,154 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:55:49,156 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:49,156 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:49,156 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:49,156 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:49,156 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:49,157 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:49,157 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:49,158 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:49,158 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:49,158 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:49,160 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:49,160 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:49,700 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:49,701 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:49,788 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:55:49,789 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:55:49,789 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmp4_bgyzxe.
+2025-08-28 14:55:49,790 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:55:49,791 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpp9jdo3j3.
+2025-08-28 14:55:49,791 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpp9jdo3j3
+2025-08-28 14:55:50,197 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmp4_bgyzxe/index.html
+2025-08-28 14:55:50,198 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:55:51,106 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:55:51,107 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:55:51,107 - kaleido.kaleido - INFO - Got F473
+2025-08-28 14:55:51,108 - kaleido._kaleido_tab - INFO - Processing bEmon_mapa_skupiny__tv_slovab.png
+2025-08-28 14:55:51,108 - kaleido._kaleido_tab - INFO - Sending big command for bEmon_mapa_skupiny__tv_slovab.png.
+2025-08-28 14:55:51,426 - kaleido._kaleido_tab - INFO - Sent big command for bEmon_mapa_skupiny__tv_slovab.png.
+2025-08-28 14:55:51,430 - kaleido.kaleido - INFO - Reloading tab F473 before return.
+2025-08-28 14:55:52,130 - kaleido.kaleido - INFO - Putting tab F473 back (queue size: 0).
+2025-08-28 14:55:52,130 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:55:52,130 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:55:52,132 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:52,132 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:52,132 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:52,132 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:52,132 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:52,135 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:52,135 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:52,136 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:52,137 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:52,138 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:52,559 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:52,560 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:52,717 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-28 14:55:52,718 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-08-28 14:55:52,719 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpek_q9ar8.
+2025-08-28 14:55:52,720 - choreographer.browser_async - INFO - Opening browser.
+2025-08-28 14:55:52,721 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\bunni\AppData\Local\Temp\tmpy7w15jrp.
+2025-08-28 14:55:52,722 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\bunni\AppData\Local\Temp\tmpy7w15jrp
+2025-08-28 14:55:52,730 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:52,731 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:53,234 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/bunni/AppData/Local/Temp/tmpek_q9ar8/index.html
+2025-08-28 14:55:53,240 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-28 14:55:54,176 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-28 14:55:54,178 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-28 14:55:54,178 - kaleido.kaleido - INFO - Got 56B3
+2025-08-28 14:55:54,178 - kaleido._kaleido_tab - INFO - Processing bJak_se_mnila_tvoje_reakn_doba_bhem_kolub.png
+2025-08-28 14:55:54,178 - kaleido._kaleido_tab - INFO - Sending big command for bJak_se_mnila_tvoje_reakn_doba_bhem_kolub.png.
+2025-08-28 14:55:54,343 - kaleido._kaleido_tab - INFO - Sent big command for bJak_se_mnila_tvoje_reakn_doba_bhem_kolub.png.
+2025-08-28 14:55:54,344 - kaleido.kaleido - INFO - Reloading tab 56B3 before return.
+2025-08-28 14:55:55,046 - kaleido.kaleido - INFO - Putting tab 56B3 back (queue size: 0).
+2025-08-28 14:55:55,047 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-28 14:55:55,047 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-28 14:55:55,048 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:55,048 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:55,048 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:55,050 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:55,050 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:55,051 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:55,051 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:55,052 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-28 14:55:55,052 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-28 14:55:55,052 - choreographer.browser_async - INFO - Closing browser.
+2025-08-28 14:55:55,648 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:55,649 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:55,772 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: pdf_generated, Details: PDF report úspìšnì vygenerován
+2025-08-28 14:55:55,812 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: qualitative_analysis, Details: Zobrazeno 3 citátù
+2025-08-28 14:55:55,815 - error_handler - INFO - USER_ACTIVITY - ID: PCZ001, Action: report_completed, Details: Uživatel dokonèil prohlížení reportu
+2025-08-28 14:55:55,885 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:55,887 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:55,887 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:55,888 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-28 14:55:55,888 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-28 14:55:55,888 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.

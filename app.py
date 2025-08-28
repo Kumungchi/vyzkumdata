@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from pathlib import Path
 import time
+import traceback
 
 from utils import standardize_hand_columns, compute_deltas
 from pdf_utils import build_pdf_report
@@ -163,9 +164,23 @@ def main():
         # Kontrola dat před vytvořením grafů
         if deltas_all.empty or sub.empty:
             st.error("🚫 **Chyba:** Prázdná data pro vizualizaci.")
+            st.info(f"Debug info: deltas_all má {len(deltas_all)} řádků, sub má {len(sub)} řádků")
+            st.stop()
+        
+        # Dodatečná kontrola numerických sloupců
+        required_numeric_cols = ["delta_valence", "delta_arousal", "First reaction time"]
+        missing_cols = [col for col in required_numeric_cols if col not in sub.columns]
+        if missing_cols:
+            st.error(f"🚫 **Chyba:** Chybí sloupce v datech: {missing_cols}")
+            st.info(f"Dostupné sloupce: {list(sub.columns)}")
             st.stop()
             
-        # Radar chart - moderní gradient design
+        # Kontrola, zda máme alespoň nějaká numerická data
+        if sub[required_numeric_cols].isna().all().all():
+            st.error("🚫 **Chyba:** Všechna numerická data jsou prázdná (NaN)")
+            st.stop()
+            
+        # Radar chart - elegantní moderní gradient design
         radar_categories = ["Δ valence (X)","Δ arousal (Z)","Reakční doba"]
         fig_radar = go.Figure()
         
@@ -173,69 +188,90 @@ def main():
             r=[user_val,user_ar,user_rt], 
             theta=radar_categories, 
             fill='toself', 
-            name='Tvůj profil',
-            line=dict(color='#FF6B6B', width=3),  # Moderní růžová
-            fillcolor='rgba(255, 107, 107, 0.3)'  
+            name='<b>Tvůj profil</b>',
+            line=dict(color='#F59E0B', width=3, smoothing=1.3),  # Amber s vyhlazením
+            fillcolor='rgba(245, 158, 11, 0.2)',
+            marker=dict(size=8, color='#D97706')
         ))
         fig_radar.add_trace(go.Scatterpolar(
             r=[overall["delta_valence"],overall["delta_arousal"],overall["First reaction time"]],
             theta=radar_categories, 
             fill='toself', 
-            name='Průměr skupiny',
-            line=dict(color='#4ECDC4', width=2, dash='dot'),  # Moderní tyrkysová
-            fillcolor='rgba(78, 205, 196, 0.2)'
+            name='<b>Průměr skupiny</b>',
+            line=dict(color='#6366F1', width=2.5, dash='dot', smoothing=1.3),  # Indigo s tečkami
+            fillcolor='rgba(99, 102, 241, 0.15)',
+            marker=dict(size=6, color='#4F46E5')
         ))
         fig_radar.update_layout(
             polar=dict(
                 radialaxis=dict(
                     visible=True,
-                    gridcolor='rgba(255,255,255,0.3)',
-                    linecolor='rgba(255,255,255,0.3)'
+                    gridcolor='rgba(156, 163, 175, 0.4)',
+                    linecolor='rgba(156, 163, 175, 0.6)',
+                    tickfont=dict(size=10, color='#6B7280')
                 ),
                 angularaxis=dict(
-                    gridcolor='rgba(255,255,255,0.3)',
-                    linecolor='rgba(255,255,255,0.3)'
+                    gridcolor='rgba(156, 163, 175, 0.4)',
+                    linecolor='rgba(156, 163, 175, 0.6)',
+                    tickfont=dict(size=12, color='#374151', family="Inter, system-ui, sans-serif")
                 ),
-                bgcolor='rgba(0,0,0,0)'
+                bgcolor='rgba(249, 250, 251, 0.5)'
             ), 
             showlegend=True,
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#2C3E50', size=12),
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=-0.1,
+                xanchor="center",
+                x=0.5,
+                font=dict(size=12, color='#374151', family="Inter, system-ui, sans-serif"),
+                bgcolor="rgba(255, 255, 255, 0.8)",
+                bordercolor="rgba(229, 231, 235, 1)",
+                borderwidth=1
+            ),
+            plot_bgcolor='white',
+            paper_bgcolor='white',
+            font=dict(color='#111827', size=12, family="Inter, system-ui, sans-serif"),
             title=dict(
-                text="Tvůj emoční radar",
-                font=dict(size=16, color='#2C3E50'),
-                x=0.5
-            )
+                text="<b>Tvůj emoční radar</b>",
+                font=dict(size=18, color='#111827', family="Inter, system-ui, sans-serif"),
+                x=0.5,
+                pad=dict(t=20, b=20)
+            ),
+            margin=dict(l=60, r=60, t=80, b=80),
+            height=500
         )
 
         # Boxploty - moderní design s gradientem
         import numpy as np
         
-        # Boxplot pro valenci - moderní design
+        # Boxplot pro valenci - moderní design s gradientním pozadím
         fig_hist_val = go.Figure()
         
-        # Přidání boxplotu populace - moderní styl
+        # Přidání boxplotu populace - elegantní moderní styl
         fig_hist_val.add_trace(go.Box(
             y=deltas_all["delta_valence"],
             name="Všichni účastníci",
             boxpoints=False,
-            fillcolor='rgba(78, 205, 196, 0.7)',  # Moderní tyrkysová
-            line=dict(color='#4ECDC4', width=2),
-            marker=dict(color='#4ECDC4', size=8)
+            fillcolor='rgba(99, 102, 241, 0.15)',  # Indigo s transparentností
+            line=dict(color='#6366F1', width=2.5),
+            marker=dict(color='#6366F1', size=6),
+            whiskerwidth=0.8,
+            boxmean=True  # Zobrazí průměr
         ))
         
-        # Přidání tvé hodnoty jako výrazný bod
+        # Přidání tvé hodnoty jako stylový bod
         fig_hist_val.add_trace(go.Scatter(
             x=["Všichni účastníci"],
             y=[user_val],
             mode="markers",
             name="Tvá hodnota",
             marker=dict(
-                color='#FF6B6B',  # Moderní růžová
-                size=20,
+                color='#F59E0B',  # Moderní amber
+                size=16,
                 symbol="diamond",
-                line=dict(color='#E85A4F', width=3)
+                line=dict(color='#D97706', width=2.5),
+                opacity=0.9
             )
         ))
         
@@ -245,53 +281,82 @@ def main():
         
         fig_hist_val.update_layout(
             title=dict(
-                text=f"Jak vnímáš příjemnost slov oproti ostatním<br><sub style='color:#7F8C8D'>{val_interpretation}</sub>",
-                font=dict(size=14, color='#2C3E50'),
-                x=0.5
+                text=f"<b>Jak vnímáš příjemnost slov oproti ostatním</b><br><span style='color:#6B7280; font-size:13px'>{val_interpretation}</span>",
+                font=dict(size=16, color='#111827', family="Inter, system-ui, sans-serif"),
+                x=0.5,
+                pad=dict(t=20, b=20)
             ),
-            yaxis_title="Δ valence (negativnější ← 0 → pozitivnější)",
+            yaxis_title="<b>Δ valence</b> (negativnější ← 0 → pozitivnější)",
+            yaxis=dict(
+                title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                tickfont=dict(size=11, color='#6B7280'),
+                gridcolor='rgba(156, 163, 175, 0.3)',
+                zerolinecolor='#9CA3AF',
+                zerolinewidth=1.5
+            ),
             xaxis_title="",
+            xaxis=dict(
+                tickfont=dict(size=12, color='#374151', family="Inter, system-ui, sans-serif"),
+                showgrid=False
+            ),
             showlegend=True,
-            plot_bgcolor='rgba(248, 249, 250, 0.8)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#2C3E50'),
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="center",
+                x=0.5,
+                font=dict(size=11, color='#374151')
+            ),
+            plot_bgcolor='rgba(249, 250, 251, 1)',
+            paper_bgcolor='white',
+            font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
+            margin=dict(l=60, r=20, t=80, b=40),
+            height=400,
             annotations=[
                 dict(
                     x=0, y=user_val,
-                    text=f"Ty: {user_val:.2f}",
+                    text=f"<b>Ty: {user_val:.2f}</b>",
                     showarrow=True,
                     arrowhead=2,
-                    arrowcolor="#FF6B6B",
-                    ax=60, ay=0,
-                    font=dict(color='#E85A4F', weight='bold')
+                    arrowcolor="#F59E0B",
+                    arrowwidth=2,
+                    ax=70, ay=-10,
+                    font=dict(color='#D97706', size=12, family="Inter, system-ui, sans-serif"),
+                    bgcolor="rgba(255, 255, 255, 0.9)",
+                    bordercolor="#F59E0B",
+                    borderwidth=1
                 )
             ]
         )
 
-        # Boxplot pro arousal - moderní design 
+        # Boxplot pro arousal - elegantní fialový design 
         fig_hist_ar = go.Figure()
         
-        # Přidání boxplotu populace
+        # Přidání boxplotu populace - moderní fialový styl
         fig_hist_ar.add_trace(go.Box(
             y=deltas_all["delta_arousal"],
             name="Všichni účastníci",
             boxpoints=False,
-            fillcolor='rgba(155, 89, 182, 0.7)',  # Moderní fialová
-            line=dict(color='#9B59B6', width=2),
-            marker=dict(color='#9B59B6', size=8)
+            fillcolor='rgba(139, 92, 246, 0.15)',  # Violet s transparentností
+            line=dict(color='#8B5CF6', width=2.5),
+            marker=dict(color='#8B5CF6', size=6),
+            whiskerwidth=0.8,
+            boxmean=True  # Zobrazí průměr
         ))
         
-        # Přidání tvé hodnoty
+        # Přidání tvé hodnoty - sladění s amber barvou
         fig_hist_ar.add_trace(go.Scatter(
             x=["Všichni účastníci"],
             y=[user_ar],
             mode="markers",
             name="Tvá hodnota",
             marker=dict(
-                color='#FF6B6B',  # Stejná barva jako u valence
-                size=20,
+                color='#F59E0B',  # Stejná amber jako u valence
+                size=16,
                 symbol="diamond",
-                line=dict(color='#E85A4F', width=3)
+                line=dict(color='#D97706', width=2.5),
+                opacity=0.9
             )
         ))
         
@@ -301,136 +366,315 @@ def main():
         
         fig_hist_ar.update_layout(
             title=dict(
-                text=f"Jak intenzivně reaguješ na slova oproti ostatním<br><sub style='color:#7F8C8D'>{ar_interpretation}</sub>",
-                font=dict(size=14, color='#2C3E50'),
-                x=0.5
+                text=f"<b>Jak intenzivně reaguješ na slova oproti ostatním</b><br><span style='color:#6B7280; font-size:13px'>{ar_interpretation}</span>",
+                font=dict(size=16, color='#111827', family="Inter, system-ui, sans-serif"),
+                x=0.5,
+                pad=dict(t=20, b=20)
             ),
-            yaxis_title="Δ arousal (klidnější ← 0 → intenzivnější)",
+            yaxis_title="<b>Δ arousal</b> (klidnější ← 0 → intenzivnější)",
+            yaxis=dict(
+                title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                tickfont=dict(size=11, color='#6B7280'),
+                gridcolor='rgba(156, 163, 175, 0.3)',
+                zerolinecolor='#9CA3AF',
+                zerolinewidth=1.5
+            ),
             xaxis_title="",
+            xaxis=dict(
+                tickfont=dict(size=12, color='#374151', family="Inter, system-ui, sans-serif"),
+                showgrid=False
+            ),
             showlegend=True,
-            plot_bgcolor='rgba(248, 249, 250, 0.8)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#2C3E50'),
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="center",
+                x=0.5,
+                font=dict(size=11, color='#374151')
+            ),
+            plot_bgcolor='rgba(249, 250, 251, 1)',
+            paper_bgcolor='white',
+            font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
+            margin=dict(l=60, r=20, t=80, b=40),
+            height=400,
             annotations=[
                 dict(
                     x=0, y=user_ar,
-                    text=f"Ty: {user_ar:.2f}",
+                    text=f"<b>Ty: {user_ar:.2f}</b>",
                     showarrow=True,
                     arrowhead=2,
-                    arrowcolor="#FF6B6B",
-                    ax=60, ay=0,
-                    font=dict(color='#E85A4F', weight='bold')
+                    arrowcolor="#F59E0B",
+                    arrowwidth=2,
+                    ax=70, ay=-10,
+                    font=dict(color='#D97706', size=12, family="Inter, system-ui, sans-serif"),
+                    bgcolor="rgba(255, 255, 255, 0.9)",
+                    bordercolor="#F59E0B",
+                    borderwidth=1
                 )
             ]
         )
 
-        # Scatter (bubliny) - moderní design
+        # Scatter (bubliny) - elegantní moderní design
         fig_scatter = px.scatter(
             sub, x="delta_arousal", y="delta_valence",
             size="First reaction time",
             hover_data={"Term":True,"delta_arousal":":.2f","delta_valence":":.2f","First reaction time":":.2f"},
             labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)","First reaction time":"Reakční doba (s)"},
-            title="Tvá slova v emočním prostoru",
-            color_discrete_sequence=["#FF6B6B"]  # Moderní růžová
+            title="<b>Tvá slova v emočním prostoru</b>",
+            color_discrete_sequence=["#10B981"]  # Moderní emerald zelená
         )
+        
+        # Přidání gradientního pozadí a vylepšení stylu
+        fig_scatter.update_traces(
+            marker=dict(
+                line=dict(width=1.5, color='white'),
+                opacity=0.8,
+                sizemin=8,
+                sizeref=0.3
+            ),
+            hovertemplate="<b>%{customdata[0]}</b><br>" +
+                        "Δ arousal: %{x:.2f}<br>" +
+                        "Δ valence: %{y:.2f}<br>" +
+                        "Reakční doba: %{customdata[3]:.2f}s<extra></extra>"
+        )
+        
         fig_scatter.update_layout(
-            xaxis_title="Δ arousal (klidnější ← → intenzivnější)",
-            yaxis_title="Δ valence (negativnější ← → pozitivnější)",
-            plot_bgcolor='rgba(248, 249, 250, 0.8)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#2C3E50'),
             title=dict(
-                font=dict(size=16, color='#2C3E50'),
-                x=0.5
-            )
+                font=dict(size=18, color='#111827', family="Inter, system-ui, sans-serif"),
+                x=0.5,
+                pad=dict(t=20, b=20)
+            ),
+            xaxis_title="<b>Δ arousal</b> (klidnější ← → intenzivnější)",
+            yaxis_title="<b>Δ valence</b> (negativnější ← → pozitivnější)",
+            xaxis=dict(
+                title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                tickfont=dict(size=11, color='#6B7280'),
+                gridcolor='rgba(156, 163, 175, 0.3)',
+                zerolinecolor='#9CA3AF',
+                zerolinewidth=2,
+                showline=True,
+                linecolor='#E5E7EB'
+            ),
+            yaxis=dict(
+                title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                tickfont=dict(size=11, color='#6B7280'),
+                gridcolor='rgba(156, 163, 175, 0.3)',
+                zerolinecolor='#9CA3AF',
+                zerolinewidth=2,
+                showline=True,
+                linecolor='#E5E7EB'
+            ),
+            plot_bgcolor='rgba(249, 250, 251, 1)',
+            paper_bgcolor='white',
+            font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
+            margin=dict(l=60, r=40, t=80, b=60),
+            height=500,
+            # Přidání subtilního gradientu do pozadí
+            shapes=[
+                dict(
+                    type="rect",
+                    xref="paper", yref="paper",
+                    x0=0, y0=0, x1=1, y1=1,
+                    fillcolor="rgba(249, 250, 251, 0.8)",
+                    layer="below",
+                    line_width=0,
+                )
+            ]
         )
 
-        # Kontury - INFRAČERVENÁ HEATMAPA (modrá → červená) - CLOUD SAFE
+        # Kontury - elegantní heatmapa s moderním designem
         fig_contour = px.density_contour(
             deltas_all, x="delta_arousal", y="delta_valence",
             labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)"},
-            title="Emoční mapa skupiny + tvá slova",
+            title="<b>Emoční mapa skupiny + tvá slova</b>",
         )
-        # Bezpečná infrared paleta - používáme přednastavený colorscale
+        
+        # Moderní color scheme - použijeme elegantní blue-purple gradient
         fig_contour.update_traces(
             contours_coloring="fill", 
-            contours_showlabels=True,
-            colorscale="RdYlBu_r",  # Red-Yellow-Blue reversed = infrared efekt
+            contours_showlabels=False,  # Skryjeme labely pro čistší vzhled
+            colorscale=[
+                [0.0, "rgba(99, 102, 241, 0.1)"],      # Velmi světlý indigo
+                [0.2, "rgba(99, 102, 241, 0.3)"],      # Světlý indigo
+                [0.4, "rgba(139, 92, 246, 0.5)"],      # Středně fialová
+                [0.6, "rgba(168, 85, 247, 0.7)"],      # Tmavší fialová
+                [0.8, "rgba(147, 51, 234, 0.8)"],      # Fialová
+                [1.0, "rgba(126, 34, 206, 0.9)"]       # Nejintenzivnější fialová
+            ],
             showscale=True,
             colorbar=dict(
-                title="Hustota<br>(studená → teplá)",
-                titlefont=dict(color='#2C3E50')
-            )
+                title=dict(
+                    text="<b>Hustota účastníků</b><br><span style='font-size:11px'>nízká → vysoká</span>",
+                    font=dict(color='#374151', size=12, family="Inter, system-ui, sans-serif")
+                ),
+                tickfont=dict(color='#6B7280', size=10),
+                thickness=12,
+                len=0.7,
+                x=1.02
+            ),
+            line=dict(width=0.5, color='rgba(255, 255, 255, 0.3)')  # Jemné bílé okraje
         )
+        
         fig_contour.update_layout(
-            xaxis_title="Δ arousal (klidnější ← → intenzivnější)",
-            yaxis_title="Δ valence (negativnější ← → pozitivnější)",
-            plot_bgcolor='rgba(248, 249, 250, 0.8)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#2C3E50'),
             title=dict(
-                font=dict(size=16, color='#2C3E50'),
-                x=0.5
-            )
+                font=dict(size=18, color='#111827', family="Inter, system-ui, sans-serif"),
+                x=0.5,
+                pad=dict(t=20, b=20)
+            ),
+            xaxis_title="<b>Δ arousal</b> (klidnější ← → intenzivnější)",
+            yaxis_title="<b>Δ valence</b> (negativnější ← → pozitivnější)",
+            xaxis=dict(
+                title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                tickfont=dict(size=11, color='#6B7280'),
+                gridcolor='rgba(156, 163, 175, 0.2)',
+                zerolinecolor='#9CA3AF',
+                zerolinewidth=2,
+                showline=True,
+                linecolor='#E5E7EB'
+            ),
+            yaxis=dict(
+                title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                tickfont=dict(size=11, color='#6B7280'),
+                gridcolor='rgba(156, 163, 175, 0.2)',
+                zerolinecolor='#9CA3AF',
+                zerolinewidth=2,
+                showline=True,
+                linecolor='#E5E7EB'
+            ),
+            plot_bgcolor='white',
+            paper_bgcolor='white',
+            font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
+            margin=dict(l=60, r=100, t=80, b=60),
+            height=550
         )
+        
+        # Přidání tvých slov jako elegantní body
         fig_contour.add_scatter(
             x=sub["delta_arousal"], y=sub["delta_valence"], 
             mode="markers+text",
             text=sub["Term"], 
             textposition="top center",
             marker=dict(
-                color="#FFFFFF",  # Bílé body pro kontrast
-                size=10, 
+                color="white",  # Bílé body pro maximální kontrast
+                size=12, 
                 opacity=1,
                 symbol="circle",
-                line=dict(color="#2C3E50", width=2)  # Tmavý okraj
+                line=dict(color="#F59E0B", width=3)  # Amber okraj
             ), 
-            name="Tvá slova",
-            textfont=dict(color='#2C3E50', size=10)
+            name="<b>Tvá slova</b>",
+            textfont=dict(
+                color='#111827', 
+                size=10, 
+                family="Inter, system-ui, sans-serif",
+                weight="bold"
+            ),
+            hovertemplate="<b>%{text}</b><br>" +
+                        "Δ arousal: %{x:.2f}<br>" +
+                        "Δ valence: %{y:.2f}<extra></extra>"
         )
 
-        # Line chart (pokud je Order) - moderní design
+        # Line chart (pokud je Order) - elegantní moderní design
         fig_line = None
         if "Order" in sub.columns:
             srt = sub.sort_values("Order")
             fig_line = px.line(srt, x="Order", y="First reaction time", markers=True,
-                              labels={"Order":"Pořadí","First reaction time":"Reakční doba (s)"},
-                              title="Jak se měnila tvoje reakční doba během úkolu",
-                              color_discrete_sequence=["#FF6B6B"])
+                            labels={"Order":"Pořadí","First reaction time":"Reakční doba (s)"},
+                            title="<b>Jak se měnila tvoje reakční doba během úkolu</b>",
+                            color_discrete_sequence=["#10B981"])  # Elegantní emerald
             
-            # Aplikace moderního stylu na časový graf
+            # Aplikace pokročilého moderního stylu
             fig_line.update_traces(
-                line=dict(width=3, color="#FF6B6B"),
-                marker=dict(size=8, color="#FF6B6B", line=dict(width=2, color="white")),
+                line=dict(width=3, color="#10B981", smoothing=1.3),
+                marker=dict(
+                    size=8, 
+                    color="#059669", 
+                    line=dict(width=2, color="white"),
+                    symbol="circle"
+                ),
                 hovertemplate="<b>Pořadí:</b> %{x}<br><b>Reakční doba:</b> %{y:.2f}s<extra></extra>"
             )
             
             fig_line.update_layout(
-                plot_bgcolor="rgba(0,0,0,0)",
-                paper_bgcolor="rgba(0,0,0,0)", 
-                font=dict(family="Arial, sans-serif", size=14, color="#2C3E50"),
-                title=dict(font=dict(size=18, color="#2C3E50"), x=0.5),
+                plot_bgcolor="white",
+                paper_bgcolor="white", 
+                font=dict(family="Inter, system-ui, sans-serif", size=12, color="#111827"),
+                title=dict(
+                    font=dict(size=18, color="#111827", family="Inter, system-ui, sans-serif"), 
+                    x=0.5,
+                    pad=dict(t=20, b=20)
+                ),
                 xaxis=dict(
+                    title="<b>Pořadí hodnocení</b>",
+                    title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                    tickfont=dict(size=11, color='#6B7280'),
                     showgrid=True, 
-                    gridcolor="rgba(200,200,200,0.3)",
+                    gridcolor="rgba(156, 163, 175, 0.3)",
                     showline=True,
-                    linecolor="rgba(200,200,200,0.8)"
+                    linecolor="#E5E7EB",
+                    linewidth=1
                 ),
                 yaxis=dict(
+                    title="<b>Reakční doba (sekundy)</b>",
+                    title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
+                    tickfont=dict(size=11, color='#6B7280'),
                     showgrid=True, 
-                    gridcolor="rgba(200,200,200,0.3)",
+                    gridcolor="rgba(156, 163, 175, 0.3)",
                     showline=True,
-                    linecolor="rgba(200,200,200,0.8)"
+                    linecolor="#E5E7EB",
+                    linewidth=1
                 ),
                 hovermode="x unified",
-                margin=dict(l=10, r=10, t=60, b=10)
+                margin=dict(l=60, r=20, t=80, b=60),
+                height=400,
+                # Přidání jemného gradientního pozadí
+                shapes=[
+                    dict(
+                        type="rect",
+                        xref="paper", yref="paper",
+                        x0=0, y0=0, x1=1, y1=1,
+                        fillcolor="rgba(249, 250, 251, 0.5)",
+                        layer="below",
+                        line_width=0,
+                    )
+                ]
             )
 
         log_user_activity(selected_id, "charts_created", "Všechny grafy úspěšně vytvořeny")
         
     except Exception as e:
         logger.error(f"Chyba při vytváření grafů pro {selected_id}: {e}")
-        st.error("🚫 **Chyba při vytváření vizualizací.** Kontaktujte podporu.")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        
+        st.error("🚫 **Chyba při vytváření vizualizací**")
+        st.error("Někde nastal problém při generování grafů. Zkuste:")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("""
+            **🔄 Okamžitě:**
+            - Obnovte stránku (F5)
+            - Zkontrolujte internetové připojení
+            - Zkuste jiný prohlížeč
+            """)
+        
+        with col2:
+            st.markdown("""
+            **📞 Pokud problém přetrvává:**
+            - Kontaktujte podporu
+            - Uveďte své ID a čas chyby
+            - Popište, co jste dělali před chybou
+            """)
+        
+        if st.checkbox("🔧 Zobrazit technické detaily"):
+            st.code(f"ID: {selected_id}")
+            st.code(f"Chyba: {type(e).__name__}: {e}")
+            st.code(f"Čas: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+            
+        # Přidáme tlačítko pro restart
+        if st.button("🔄 Zkusit znovu"):
+            st.rerun()
+            
         st.stop()
 
     # -----------------------------
@@ -541,7 +785,7 @@ def main():
     # -----------------------------
     if pdf_bytes:
         st.download_button("📄 Stáhnout osobní PDF report", data=pdf_bytes,
-                          file_name=f"{selected_id}_emocni_profil.pdf", mime="application/pdf")
+                        file_name=f"{selected_id}_emocni_profil.pdf", mime="application/pdf")
     
     st.divider()
 
@@ -554,19 +798,19 @@ def main():
 
     left,right = st.columns(2)
     with left:
-        st.subheader("� Jak vnímáš příjemnost slov")
+        st.subheader("Jak vnímáš příjemnost slov")
         st.caption("**Co ukazuje:** Krabička = rozsah, ve kterém se nacházela většina účastníků. Červený diamant = tvá pozice.  \n**Jak číst:** Jsi-li uvnitř krabičky = typický. Mimo krabičku = máš výrazně odlišný styl hodnocení příjemnosti slov!")
         st.plotly_chart(fig_hist_val, use_container_width=True)
     with right:
-        st.subheader("� Jak vnímáš intenzitu emocí") 
+        st.subheader("Jak vnímáš intenzitu emocí") 
         st.caption("**Co ukazuje:** Krabička = rozsah většiny účastníků. Červený diamant = ty.  \n**Jak číst:** Nad krabičkou = reaguješ intenzivněji než většina. Pod krabičkou = reaguješ klidněji. V krabičce = jsi typický!")
         st.plotly_chart(fig_hist_ar, use_container_width=True)
 
-    st.subheader("🎯 Mapa tvých slov")
+    st.subheader("Mapa tvých slov")
     st.caption("**Co ukazuje:** Každý bod = jedno slovo, které jsi hodnotil. Větší bublina = delší čas rozhodování.  \n**Jak číst:** Pozice ukazuje, jak jsi slovo posunul oproti očekávání. Najetím myší uvidíš detaily.")
     st.plotly_chart(fig_scatter, use_container_width=True)
 
-    st.subheader("🔥 Emoční ‚heatmapa' skupiny + tvá slova")
+    st.subheader("Emoční ‚heatmapa' skupiny + tvá slova")
     st.caption("**Co ukazuje:** Teplá místa (žlutá/bílá) = tam hodnotila většina účastníků, studená (červená/černá) = méně časté. Červené body = tvá slova.  \n**Jak číst:** Pokud jsou tvá slova v teplých oblastech, hodnotíš podobně jako většina. V chladných oblastech = máš unikátní přístup!")
     st.plotly_chart(fig_contour, use_container_width=True)
 
@@ -628,7 +872,7 @@ def main():
 
     if pdf_bytes:
         st.download_button("📄 Stáhnout PDF report (znovu)", data=pdf_bytes,
-                          file_name=f"{selected_id}_emocni_profil.pdf", mime="application/pdf")
+                        file_name=f"{selected_id}_emocni_profil.pdf", mime="application/pdf")
 
     st.divider()
     st.markdown("---")
