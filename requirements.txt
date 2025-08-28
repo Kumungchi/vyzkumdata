@@ -3,3 +3,11 @@ pandas
 plotly
 scikit-learn
 python-docx
+kaleido
+reportlab
+numpy
+
+# Nové závislosti pro produkci
+unittest-xml-reporting  # Pro XML test reporty
+memory-profiler        # Pro monitoring paměti
+psutil                # Pro monitoring systému
