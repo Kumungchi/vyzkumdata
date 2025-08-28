@@ -161,59 +161,77 @@ def main():
     # Grafy – tvorba s error handlingem
     # -----------------------------
     try:
-        # Radar - černobílé barvy pro tisk
+        # Radar - moderní design s gradientem
         radar_categories = ["Δ valence (X)","Δ arousal (Z)","Reakční doba"]
         fig_radar = go.Figure()
+        
         fig_radar.add_trace(go.Scatterpolar(
             r=[user_val,user_ar,user_rt], 
             theta=radar_categories, 
             fill='toself', 
-            name='Ty',
-            line=dict(color='black', width=2),
-            fillcolor='rgba(128,128,128,0.5)'  # Poloprůhledná šedá
+            name='Tvůj profil',
+            line=dict(color='#FF6B6B', width=3),  # Moderní růžová
+            fillcolor='rgba(255, 107, 107, 0.3)'  
         ))
         fig_radar.add_trace(go.Scatterpolar(
             r=[overall["delta_valence"],overall["delta_arousal"],overall["First reaction time"]],
             theta=radar_categories, 
             fill='toself', 
-            name='Průměr',
-            line=dict(color='gray', width=2, dash='dash'),
-            fillcolor='rgba(200,200,200,0.3)'  # Světlejší šedá
+            name='Průměr skupiny',
+            line=dict(color='#4ECDC4', width=2, dash='dot'),  # Moderní tyrkysová
+            fillcolor='rgba(78, 205, 196, 0.2)'
         ))
         fig_radar.update_layout(
-            polar=dict(radialaxis=dict(visible=True)), 
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    gridcolor='rgba(255,255,255,0.3)',
+                    linecolor='rgba(255,255,255,0.3)'
+                ),
+                angularaxis=dict(
+                    gridcolor='rgba(255,255,255,0.3)',
+                    linecolor='rgba(255,255,255,0.3)'
+                ),
+                bgcolor='rgba(0,0,0,0)'
+            ), 
             showlegend=True,
-            plot_bgcolor="white",
-            paper_bgcolor="white"
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#2C3E50', size=12),
+            title=dict(
+                text="Tvůj emoční radar",
+                font=dict(size=16, color='#2C3E50'),
+                x=0.5
+            )
         )
 
-        # Boxploty místo histogramů - srozumitelnější pro uživatele
+        # Boxploty - moderní design s gradientem
         import numpy as np
         
-        # Boxplot pro valenci
+        # Boxplot pro valenci - moderní design
         fig_hist_val = go.Figure()
         
-        # Přidání boxplotu populace
+        # Přidání boxplotu populace - moderní styl
         fig_hist_val.add_trace(go.Box(
             y=deltas_all["delta_valence"],
             name="Všichni účastníci",
             boxpoints=False,
-            fillcolor="lightgray",
-            line=dict(color="gray", width=2),
-            marker=dict(color="gray")
+            fillcolor='rgba(78, 205, 196, 0.7)',  # Moderní tyrkysová
+            line=dict(color='#4ECDC4', width=2),
+            marker=dict(color='#4ECDC4', size=8)
         ))
         
-        # Přidání tvé hodnoty jako červený bod
+        # Přidání tvé hodnoty jako výrazný bod
         fig_hist_val.add_trace(go.Scatter(
             x=["Všichni účastníci"],
             y=[user_val],
             mode="markers",
             name="Tvá hodnota",
             marker=dict(
-                color="red",
-                size=15,
+                color='#FF6B6B',  # Moderní růžová
+                size=20,
                 symbol="diamond",
-                line=dict(color="black", width=2)
+                line=dict(color='#E85A4F', width=3)
             )
         ))
         
@@ -222,25 +240,31 @@ def main():
         val_interpretation = f"Tvoje hodnocení bylo pozitivnější než u {val_percentile:.0f}% účastníků" if user_val > 0 else f"Tvoje hodnocení bylo negativnější než u {100-val_percentile:.0f}% účastníků"
         
         fig_hist_val.update_layout(
-            title=f"Jak vnímáš příjemnost slov oproti ostatním<br><sub>{val_interpretation}</sub>",
+            title=dict(
+                text=f"Jak vnímáš příjemnost slov oproti ostatním<br><sub style='color:#7F8C8D'>{val_interpretation}</sub>",
+                font=dict(size=14, color='#2C3E50'),
+                x=0.5
+            ),
             yaxis_title="Δ valence (negativnější ← 0 → pozitivnější)",
             xaxis_title="",
             showlegend=True,
-            plot_bgcolor="white",
-            paper_bgcolor="white",
+            plot_bgcolor='rgba(248, 249, 250, 0.8)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#2C3E50'),
             annotations=[
                 dict(
                     x=0, y=user_val,
                     text=f"Ty: {user_val:.2f}",
                     showarrow=True,
                     arrowhead=2,
-                    arrowcolor="red",
-                    ax=50, ay=0
+                    arrowcolor="#FF6B6B",
+                    ax=60, ay=0,
+                    font=dict(color='#E85A4F', weight='bold')
                 )
             ]
         )
 
-        # Boxplot pro arousal  
+        # Boxplot pro arousal - moderní design 
         fig_hist_ar = go.Figure()
         
         # Přidání boxplotu populace
@@ -248,22 +272,22 @@ def main():
             y=deltas_all["delta_arousal"],
             name="Všichni účastníci",
             boxpoints=False,
-            fillcolor="lightblue",
-            line=dict(color="blue", width=2),
-            marker=dict(color="blue")
+            fillcolor='rgba(155, 89, 182, 0.7)',  # Moderní fialová
+            line=dict(color='#9B59B6', width=2),
+            marker=dict(color='#9B59B6', size=8)
         ))
         
-        # Přidání tvé hodnoty jako červený bod
+        # Přidání tvé hodnoty
         fig_hist_ar.add_trace(go.Scatter(
             x=["Všichni účastníci"],
             y=[user_ar],
             mode="markers",
             name="Tvá hodnota",
             marker=dict(
-                color="red",
-                size=15,
+                color='#FF6B6B',  # Stejná barva jako u valence
+                size=20,
                 symbol="diamond",
-                line=dict(color="black", width=2)
+                line=dict(color='#E85A4F', width=3)
             )
         ))
         
@@ -272,70 +296,138 @@ def main():
         ar_interpretation = f"Tvé reakce byly intenzivnější než u {ar_percentile:.0f}% účastníků" if user_ar > 0 else f"Tvé reakce byly klidnější než u {100-ar_percentile:.0f}% účastníků"
         
         fig_hist_ar.update_layout(
-            title=f"Jak intenzivně reaguješ na slova oproti ostatním<br><sub>{ar_interpretation}</sub>",
+            title=dict(
+                text=f"Jak intenzivně reaguješ na slova oproti ostatním<br><sub style='color:#7F8C8D'>{ar_interpretation}</sub>",
+                font=dict(size=14, color='#2C3E50'),
+                x=0.5
+            ),
             yaxis_title="Δ arousal (klidnější ← 0 → intenzivnější)",
             xaxis_title="",
             showlegend=True,
-            plot_bgcolor="white",
-            paper_bgcolor="white",
+            plot_bgcolor='rgba(248, 249, 250, 0.8)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#2C3E50'),
             annotations=[
                 dict(
                     x=0, y=user_ar,
                     text=f"Ty: {user_ar:.2f}",
                     showarrow=True,
                     arrowhead=2,
-                    arrowcolor="red",
-                    ax=50, ay=0
+                    arrowcolor="#FF6B6B",
+                    ax=60, ay=0,
+                    font=dict(color='#E85A4F', weight='bold')
                 )
             ]
         )
 
-        # Scatter (bubliny) - černobílá verze
+        # Scatter (bubliny) - moderní design
         fig_scatter = px.scatter(
             sub, x="delta_arousal", y="delta_valence",
             size="First reaction time",
             hover_data={"Term":True,"delta_arousal":":.2f","delta_valence":":.2f","First reaction time":":.2f"},
             labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)","First reaction time":"Reakční doba (s)"},
             title="Tvá slova v emočním prostoru",
-            color_discrete_sequence=["black"]  # Černé body
+            color_discrete_sequence=["#FF6B6B"]  # Moderní růžová
         )
         fig_scatter.update_layout(
             xaxis_title="Δ arousal (klidnější ← → intenzivnější)",
             yaxis_title="Δ valence (negativnější ← → pozitivnější)",
-            plot_bgcolor="white",
-            paper_bgcolor="white"
+            plot_bgcolor='rgba(248, 249, 250, 0.8)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#2C3E50'),
+            title=dict(
+                font=dict(size=16, color='#2C3E50'),
+                x=0.5
+            )
         )
 
-        # Kontury - GRAYSCALE pro černobílý tisk
+        # Kontury - INFRAČERVENÁ HEATMAPA (modrá → červená)
         fig_contour = px.density_contour(
             deltas_all, x="delta_arousal", y="delta_valence",
             labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)"},
             title="Emoční mapa skupiny + tvá slova",
         )
-        # Nastavení šedých odstínů pro tisk
+        # INFRAČERVENÁ PALETA - modrá (studená) → červená (teplá)
         fig_contour.update_traces(
             contours_coloring="fill", 
             contours_showlabels=True,
-            colorscale="Greys",  # Černobílé odstíny
-            showscale=True
+            colorscale=[
+                [0.0, "#0D47A1"],    # Tmavě modrá (nejchladnější)
+                [0.2, "#1976D2"],    # Modrá  
+                [0.4, "#42A5F5"],    # Světle modrá
+                [0.6, "#FFA726"],    # Oranžová
+                [0.8, "#FF5722"],    # Červenooranžová  
+                [1.0, "#D32F2F"]     # Tmavě červená (nejteplejší)
+            ],
+            showscale=True,
+            colorbar=dict(
+                title="Hustota<br>(studená → teplá)",
+                titlefont=dict(color='#2C3E50')
+            )
         )
         fig_contour.update_layout(
             xaxis_title="Δ arousal (klidnější ← → intenzivnější)",
             yaxis_title="Δ valence (negativnější ← → pozitivnější)",
-            plot_bgcolor="white",
-            paper_bgcolor="white"
+            plot_bgcolor='rgba(248, 249, 250, 0.8)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#2C3E50'),
+            title=dict(
+                font=dict(size=16, color='#2C3E50'),
+                x=0.5
+            )
         )
-        fig_contour.add_scatter(x=sub["delta_arousal"], y=sub["delta_valence"], mode="markers+text",
-                               text=sub["Term"], textposition="top center",
-                               marker=dict(color="black", size=8, opacity=1, symbol="diamond"), name="Tvá slova")
+        fig_contour.add_scatter(
+            x=sub["delta_arousal"], y=sub["delta_valence"], 
+            mode="markers+text",
+            text=sub["Term"], 
+            textposition="top center",
+            marker=dict(
+                color="#FFFFFF",  # Bílé body pro kontrast
+                size=10, 
+                opacity=1,
+                symbol="circle",
+                line=dict(color="#2C3E50", width=2)  # Tmavý okraj
+            ), 
+            name="Tvá slova",
+            textfont=dict(color='#2C3E50', size=10)
+        )
 
-        # Line chart (pokud je Order)
+        # Line chart (pokud je Order) - moderní design
         fig_line = None
         if "Order" in sub.columns:
             srt = sub.sort_values("Order")
             fig_line = px.line(srt, x="Order", y="First reaction time", markers=True,
                               labels={"Order":"Pořadí","First reaction time":"Reakční doba (s)"},
-                              title="Jak se měnila tvoje reakční doba během úkolu")
+                              title="Jak se měnila tvoje reakční doba během úkolu",
+                              color_discrete_sequence=["#FF6B6B"])
+            
+            # Aplikace moderního stylu na časový graf
+            fig_line.update_traces(
+                line=dict(width=3, color="#FF6B6B"),
+                marker=dict(size=8, color="#FF6B6B", line=dict(width=2, color="white")),
+                hovertemplate="<b>Pořadí:</b> %{x}<br><b>Reakční doba:</b> %{y:.2f}s<extra></extra>"
+            )
+            
+            fig_line.update_layout(
+                plot_bgcolor="rgba(0,0,0,0)",
+                paper_bgcolor="rgba(0,0,0,0)", 
+                font=dict(family="Arial, sans-serif", size=14, color="#2C3E50"),
+                title=dict(font=dict(size=18, color="#2C3E50"), x=0.5),
+                xaxis=dict(
+                    showgrid=True, 
+                    gridcolor="rgba(200,200,200,0.3)",
+                    showline=True,
+                    linecolor="rgba(200,200,200,0.8)"
+                ),
+                yaxis=dict(
+                    showgrid=True, 
+                    gridcolor="rgba(200,200,200,0.3)",
+                    showline=True,
+                    linecolor="rgba(200,200,200,0.8)"
+                ),
+                hovermode="x unified",
+                margin=dict(l=10, r=10, t=60, b=10)
+            )
 
         log_user_activity(selected_id, "charts_created", "Všechny grafy úspěšně vytvořeny")
         

@@ -632,3 +632,11 @@
 2025-08-28 13:15:59,179 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
 2025-08-28 13:15:59,180 - error_handler - INFO - Data naètena za 0.01 sekund
 2025-08-28 13:15:59,186 - error_handler - ERROR - ID uživatele je prázdné
+2025-08-28 13:38:04,542 - error_handler - INFO - Úspìšnì naèten soubor: data\vybrana_slova_30.csv, tvar: (30, 5)
+2025-08-28 13:38:04,552 - error_handler - INFO - Úspìšnì naèten soubor: data\hand_dataset.csv, tvar: (1140, 10)
+2025-08-28 13:38:04,554 - error_handler - INFO - Validace baseline dataset úspìšná
+2025-08-28 13:38:04,554 - error_handler - INFO - Validace hand dataset úspìšná
+2025-08-28 13:38:04,558 - error_handler - WARNING - Konverze Pos X: 1 hodnot pøevedeno na NaN
+2025-08-28 13:38:04,560 - error_handler - INFO - Data naètena za 0.03 sekund
+2025-08-28 13:38:04,572 - error_handler - ERROR - ID uživatele je prázdné
+2025-08-28 13:40:14,267 - error_handler - ERROR - ID uživatele je prázdné

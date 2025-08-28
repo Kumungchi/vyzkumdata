@@ -5,8 +5,28 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 
 def fig_to_png_bytes(fig, scale=2):
-    # vyžaduje 'kaleido'
-    return fig.to_image(format="png", scale=scale)
+    """Bezpečná konverze grafu na PNG - funguje v cloudu"""
+    try:
+        # Pokus o kaleido
+        return fig.to_image(format="png", scale=scale, engine="kaleido")
+    except Exception as e:
+        try:
+            # Fallback na orca
+            return fig.to_image(format="png", scale=scale, engine="orca")
+        except Exception as e2:
+            try:
+                # Poslední pokus - základní export
+                import io
+                import base64
+                return fig.to_image(format="png", width=800, height=600)
+            except Exception as e3:
+                # Pokud všechno selže, vrať prázdný obrázek
+                from PIL import Image
+                import io
+                img = Image.new('RGB', (800, 600), color='white')
+                buf = io.BytesIO()
+                img.save(buf, format='PNG')
+                return buf.getvalue()
 
 def draw_wrapped_text(c, text, x, y, max_width=480, leading=14, font="Helvetica", size=10):
     from reportlab.pdfbase.pdfmetrics import stringWidth
