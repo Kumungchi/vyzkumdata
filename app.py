@@ -157,11 +157,15 @@ def main():
     c3.metric("Δ arousal (Z)", f"{user_ar:.2f}",  f"{user_ar - overall['delta_arousal']:+.2f} vs. průměr")
     c4.metric("Dominance (Y)", f"{user_dom:.2f}", f"{user_dom - overall['Pos Y']:+.2f} vs. průměr")
 
-    # -----------------------------
     # Grafy – tvorba s error handlingem
     # -----------------------------
     try:
-        # Radar - moderní design s gradientem
+        # Kontrola dat před vytvořením grafů
+        if deltas_all.empty or sub.empty:
+            st.error("🚫 **Chyba:** Prázdná data pro vizualizaci.")
+            st.stop()
+            
+        # Radar chart - moderní gradient design
         radar_categories = ["Δ valence (X)","Δ arousal (Z)","Reakční doba"]
         fig_radar = go.Figure()
         
@@ -341,24 +345,17 @@ def main():
             )
         )
 
-        # Kontury - INFRAČERVENÁ HEATMAPA (modrá → červená)
+        # Kontury - INFRAČERVENÁ HEATMAPA (modrá → červená) - CLOUD SAFE
         fig_contour = px.density_contour(
             deltas_all, x="delta_arousal", y="delta_valence",
             labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)"},
             title="Emoční mapa skupiny + tvá slova",
         )
-        # INFRAČERVENÁ PALETA - modrá (studená) → červená (teplá)
+        # Bezpečná infrared paleta - používáme přednastavený colorscale
         fig_contour.update_traces(
             contours_coloring="fill", 
             contours_showlabels=True,
-            colorscale=[
-                [0.0, "#0D47A1"],    # Tmavě modrá (nejchladnější)
-                [0.2, "#1976D2"],    # Modrá  
-                [0.4, "#42A5F5"],    # Světle modrá
-                [0.6, "#FFA726"],    # Oranžová
-                [0.8, "#FF5722"],    # Červenooranžová  
-                [1.0, "#D32F2F"]     # Tmavě červená (nejteplejší)
-            ],
+            colorscale="RdYlBu_r",  # Red-Yellow-Blue reversed = infrared efekt
             showscale=True,
             colorbar=dict(
                 title="Hustota<br>(studená → teplá)",
