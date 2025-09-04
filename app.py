@@ -40,14 +40,14 @@ RESEARCH_INTRO = """
 
 HELP_TEXT_INTRO = """
 **Jak číst prostor emocí:**
-- **Osa X = Valence** (negativní ↔ pozitivní) - *jak příjemné/nepříjemné slovo působí*
-- **Osa Z = Arousal** (nízký ↔ vysoký) - *jak silnou emoční reakci vyvolává*
-- **Osa Y = Dominance** (nízká ↔ vysoká kontrola) - *jak moc se při slově cítíte v kontrole*
+- **Osa X = Lateralita** (pravo ↔ levorukost) - *jak příjemné/nepříjemné slovo působí*
+- **Osa Z = Valence** (pozitivní ↔ negativní) - *jak silnou emoční reakci vyvolává*
+- **Osa Y = Arousal** (nízká ↔ vysoká) - *jak moc se při slově cítíte v kontrole*
 
-**Jak číst Δ (delta) hodnoty:**
-- **Δ valence** = o kolik jste posunuli slovo v příjemnosti oproti očekávané hodnotě
-- **Δ arousal** = o kolik jste posunuli slovo v intenzitě oproti očekávané hodnotě  
-- **Reakční doba** = průměrný čas vašeho rozhodnutí (kratší = rychlejší intuice)
+**Jak číst rozdíl hodnot:**
+- **valence** = o kolik jste posunuli slovo na ose pozitivní nebo negativní
+- **arousal** = o kolik jste posunuli slovo v intenzitě emoční reakce  
+- **Reakční doba** = průměrný čas vašeho rozhodnutí (kratší = větší míra intuice)
 """
 
 # Přidání cachingu pro lepší performance
@@ -149,14 +149,14 @@ def main():
     with st.expander("🔬 **Připomenutí: O čem byl výzkum**", expanded=False):
         st.markdown(RESEARCH_INTRO)
     
-    st.info("💡 **Tip:** Tento report si můžeš stáhnout jako PDF pomocí tlačítka níže.")
+    st.info("💡 **Tip:** Tento report si můžeš stáhnout jako PDF pomocí tlačítka níže. **Všechny grafy jsou interaktivní** – najetím myší na prvky získáte podrobnosti. Můžete také přibližovat a oddalovat pohled.")
     st.markdown(HELP_TEXT_INTRO)
 
     c1,c2,c3,c4 = st.columns(4)
     c1.metric("Hodnocených slov", f"{words_n}")
-    c2.metric("Δ valence (X)", f"{user_val:.2f}", f"{user_val - overall['delta_valence']:+.2f} vs. průměr")
-    c3.metric("Δ arousal (Z)", f"{user_ar:.2f}",  f"{user_ar - overall['delta_arousal']:+.2f} vs. průměr")
-    c4.metric("Dominance (Y)", f"{user_dom:.2f}", f"{user_dom - overall['Pos Y']:+.2f} vs. průměr")
+    c2.metric("Lateralita (X)", f"{user_val:.2f}", f"{user_val - overall['delta_valence']:+.2f} vs. průměr")
+    c3.metric("Valence (Z)", f"{user_ar:.2f}",  f"{user_ar - overall['delta_arousal']:+.2f} vs. průměr")
+    c4.metric("Arousal (Y)", f"{user_dom:.2f}", f"{user_dom - overall['Pos Y']:+.2f} vs. průměr")
 
     # Grafy – tvorba s error handlingem
     # -----------------------------
@@ -181,7 +181,7 @@ def main():
             st.stop()
             
         # Radar chart - elegantní moderní gradient design
-        radar_categories = ["Δ valence (X)","Δ arousal (Z)","Reakční doba"]
+        radar_categories = ["Lateralita (X)","Valence (Z)","Reakční doba"]
         fig_radar = go.Figure()
         
         fig_radar.add_trace(go.Scatterpolar(
@@ -283,10 +283,10 @@ def main():
             title=dict(
                 text=f"<b>Jak vnímáš příjemnost slov oproti ostatním</b><br><span style='color:#6B7280; font-size:13px'>{val_interpretation}</span>",
                 font=dict(size=16, color='#111827', family="Inter, system-ui, sans-serif"),
-                x=0.5,
+                x=0.3,
                 pad=dict(t=20, b=20)
             ),
-            yaxis_title="<b>Δ valence</b> (negativnější ← 0 → pozitivnější)",
+            yaxis_title="<b>Lateralita</b> (nepříjemné ← 0 → příjemné)",
             yaxis=dict(
                 title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
                 tickfont=dict(size=11, color='#6B7280'),
@@ -368,10 +368,10 @@ def main():
             title=dict(
                 text=f"<b>Jak intenzivně reaguješ na slova oproti ostatním</b><br><span style='color:#6B7280; font-size:13px'>{ar_interpretation}</span>",
                 font=dict(size=16, color='#111827', family="Inter, system-ui, sans-serif"),
-                x=0.5,
+                x=0.3,
                 pad=dict(t=20, b=20)
             ),
-            yaxis_title="<b>Δ arousal</b> (klidnější ← 0 → intenzivnější)",
+            yaxis_title="<b>Valence</b> (slabá ← 0 → silná emoční reakce)",
             yaxis=dict(
                 title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
                 tickfont=dict(size=11, color='#6B7280'),
@@ -415,14 +415,31 @@ def main():
             ]
         )
 
-        # Scatter (bubliny) - elegantní moderní design
+        # Scatter (bubliny) - elegantní moderní design s podmíněným barvením
+        # Vytvoříme sloupec pro barvu na základě extrémních reakčních časů
+        sub_with_colors = sub.copy()
+        rt_q75 = sub["First reaction time"].quantile(0.75)
+        rt_q25 = sub["First reaction time"].quantile(0.25)
+        iqr = rt_q75 - rt_q25
+        extreme_threshold_high = rt_q75 + 1.5 * iqr
+        extreme_threshold_low = rt_q25 - 1.5 * iqr
+        
+        # Přiřadíme barvy: hnědá pro unikátní časy, emerald pro běžné
+        sub_with_colors["color_category"] = sub_with_colors["First reaction time"].apply(
+            lambda x: "Unikátní" if (x > extreme_threshold_high or x < extreme_threshold_low) else "Běžný"
+        )
+        
         fig_scatter = px.scatter(
-            sub, x="delta_arousal", y="delta_valence",
+            sub_with_colors, x="delta_arousal", y="delta_valence",
             size="First reaction time",
+            color="color_category",
             hover_data={"Term":True,"delta_arousal":":.2f","delta_valence":":.2f","First reaction time":":.2f"},
-            labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)","First reaction time":"Reakční doba (s)"},
+            labels={"delta_arousal":"Valence (silná emoční reakce)","delta_valence":"Lateralita (příjemnost)","First reaction time":"Reakční doba (s)"},
             title="<b>Tvá slova v emočním prostoru</b>",
-            color_discrete_sequence=["#10B981"]  # Moderní emerald zelená
+            color_discrete_map={
+                "Běžný": "#10B981",  # Emerald zelená
+                "Unikátní": "#D2B48C"   # Světle hnědá
+            }
         )
         
         # Přidání gradientního pozadí a vylepšení stylu
@@ -434,9 +451,9 @@ def main():
                 sizeref=0.3
             ),
             hovertemplate="<b>%{customdata[0]}</b><br>" +
-                        "Δ arousal: %{x:.2f}<br>" +
-                        "Δ valence: %{y:.2f}<br>" +
-                        "Reakční doba: %{customdata[3]:.2f}s<extra></extra>"
+                        "Valence: %{x:.2f}<br>" +
+                        "Lateralita: %{y:.2f}<br>" +
+                        "Reakční doba: %{marker.size:.2f}s<extra></extra>"
         )
         
         fig_scatter.update_layout(
@@ -445,8 +462,8 @@ def main():
                 x=0.5,
                 pad=dict(t=20, b=20)
             ),
-            xaxis_title="<b>Δ arousal</b> (klidnější ← → intenzivnější)",
-            yaxis_title="<b>Δ valence</b> (negativnější ← → pozitivnější)",
+            xaxis_title="<b>Valence</b> (slabá ← → silná emoční reakce)",
+            yaxis_title="<b>Lateralita</b> (nepříjemné ← → příjemné)",
             xaxis=dict(
                 title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
                 tickfont=dict(size=11, color='#6B7280'),
@@ -470,6 +487,10 @@ def main():
             font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
             margin=dict(l=60, r=40, t=80, b=60),
             height=500,
+            legend=dict(
+                title_text="",  # Odstraní název nad legendou
+                font=dict(color='#000000', size=12, family="Inter, system-ui, sans-serif")  # Černý text legendy
+            ),
             # Přidání subtilního gradientu do pozadí
             shapes=[
                 dict(
@@ -486,7 +507,7 @@ def main():
         # Kontury - elegantní heatmapa s moderním designem
         fig_contour = px.density_contour(
             deltas_all, x="delta_arousal", y="delta_valence",
-            labels={"delta_arousal":"Δ arousal (intenzita)","delta_valence":"Δ valence (příjemnost)"},
+            labels={"delta_arousal":"Valence (silná emoční reakce)","delta_valence":"Lateralita (příjemnost)"},
             title="<b>Emoční mapa skupiny + tvá slova</b>",
         )
         
@@ -522,8 +543,8 @@ def main():
                 x=0.5,
                 pad=dict(t=20, b=20)
             ),
-            xaxis_title="<b>Δ arousal</b> (klidnější ← → intenzivnější)",
-            yaxis_title="<b>Δ valence</b> (negativnější ← → pozitivnější)",
+            xaxis_title="<b>Valence</b> (slabá ← → silná emoční reakce)",
+            yaxis_title="<b>Lateralita</b> (nepříjemné ← → příjemné)",
             xaxis=dict(
                 title_font=dict(size=13, color='#374151', family="Inter, system-ui, sans-serif"),
                 tickfont=dict(size=11, color='#6B7280'),
@@ -683,15 +704,15 @@ def main():
     try:
         insights = []
         
-        # Valence
+        # Lateralita (X-osa)
         if user_val > overall["delta_valence"] + 0.1:
-            insights.append("Celkově vnímáš slova **pozitivněji** než většina účastníků.")
+            insights.append("Celkově vnímáš slova **příjemnějšími** než většina účastníků.")
         elif user_val < overall["delta_valence"] - 0.1:
-            insights.append("Celkově vnímáš slova **negativněji** než většina účastníků.")
+            insights.append("Celkově vnímáš slova **nepříjemnějšími** než většina účastníků.")
         else:
-            insights.append("Tvoje vnímání pozitivnosti je **podobné** většině účastníků.")
+            insights.append("Tvoje vnímání příjemnosti slov je **podobné** většině účastníků.")
 
-        # Arousal
+        # Valence (Z-osa)
         if user_ar > overall["delta_arousal"] + 0.1:
             insights.append("Slova v tobě vyvolávala **silnější emoční odezvu** než u ostatních.")
         elif user_ar < overall["delta_arousal"] - 0.1:
@@ -723,7 +744,7 @@ def main():
         
         if not top3.empty:
             msg = "Nejosobitější slova: " + "; ".join(
-                f"{r.Term} (ΔV {r.delta_valence:+.2f}, ΔA {r.delta_arousal:+.2f})"
+                f"{r.Term} (Lateralita {r.delta_valence:+.2f}, Valence {r.delta_arousal:+.2f})"
                 for r in top3.itertuples()
             )
             insights.append(msg)
@@ -807,11 +828,11 @@ def main():
         st.plotly_chart(fig_hist_ar, use_container_width=True)
 
     st.subheader("Mapa tvých slov")
-    st.caption("**Co ukazuje:** Každý bod = jedno slovo, které jsi hodnotil. Větší bublina = delší čas rozhodování.  \n**Jak číst:** Pozice ukazuje, jak jsi slovo posunul oproti očekávání. Najetím myší uvidíš detaily.")
+    st.caption("**Co ukazuje:** Každý bod = jedno slovo, které jsi hodnotil. Větší bublina = delší čas rozhodování.  \n**Jak číst:** Pozice ukazuje, jak jsi slovo umístil. Najetím myší uvidíš detaily.")
     st.plotly_chart(fig_scatter, use_container_width=True)
 
     st.subheader("Emoční ‚heatmapa' skupiny + tvá slova")
-    st.caption("**Co ukazuje:** Teplá místa (žlutá/bílá) = tam hodnotila většina účastníků, studená (červená/černá) = méně časté. Červené body = tvá slova.  \n**Jak číst:** Pokud jsou tvá slova v teplých oblastech, hodnotíš podobně jako většina. V chladných oblastech = máš unikátní přístup!")
+    st.caption("**Co ukazuje:** Barevné plochy znázorňují, kde se soustředila většina hodnocení ostatních účastníků. Tmavé body s textem = tvá slova.  \n**Jak číst:** Pokud jsou tvá slova v tmavých oblastech, hodnotíš podobně jako většina. V světlých oblastech = máš unikátní přístup!")
     st.plotly_chart(fig_contour, use_container_width=True)
 
     if fig_line is not None:
@@ -857,7 +878,16 @@ def main():
                 for i, quote_data in enumerate(matching_quotes, 1):
                     with st.expander(f"📝 {quote_data['theme']}", expanded=(i==1)):
                         st.markdown(f"**Co to znamená:** {quote_data['definition']}")
-                        st.markdown(f"**Citát od účastníka:** _{quote_data['quote']}_")
+                        
+                        # Odstraň kód účastníka z citátu (například "(PCM023)")
+                        clean_quote = quote_data['quote']
+                        import re
+                        # Odstraň text v závorkách na konci citátu typu (PCM123), (PCZ456) atd.
+                        clean_quote = re.sub(r'\s*\([A-Z]{3}\d{3}\)\s*$', '', clean_quote).strip()
+                        # Odstraň i jiné varianty s kódy
+                        clean_quote = re.sub(r'\s*\([A-Z]+\d+\)\s*$', '', clean_quote).strip()
+                        
+                        st.markdown(f"**Citát od účastníka:** _{clean_quote}_")
                         
                 log_user_activity(selected_id, "qualitative_analysis", f"Zobrazeno {len(matching_quotes)} citátů")
             else:
