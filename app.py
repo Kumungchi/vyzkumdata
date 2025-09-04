@@ -311,8 +311,8 @@ def main():
             plot_bgcolor='rgba(249, 250, 251, 1)',
             paper_bgcolor='white',
             font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
-            margin=dict(l=60, r=20, t=80, b=40),
-            height=400,
+            margin=dict(l=60, r=20, t=120, b=40),
+            height=450,
             annotations=[
                 dict(
                     x=0, y=user_val,
@@ -396,8 +396,8 @@ def main():
             plot_bgcolor='rgba(249, 250, 251, 1)',
             paper_bgcolor='white',
             font=dict(color='#111827', family="Inter, system-ui, sans-serif"),
-            margin=dict(l=60, r=20, t=80, b=40),
-            height=400,
+            margin=dict(l=60, r=20, t=120, b=40),
+            height=450,
             annotations=[
                 dict(
                     x=0, y=user_ar,
